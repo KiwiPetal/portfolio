@@ -3,6 +3,7 @@ import Image from "@/node_modules/next/image";
 import pic1 from "../public/pic1.jpg";
 import pic2 from "../public/pic2.jpg";
 import TitleChanger from "./components/TitleChanger/Title";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 export default function Home() {
   const selfieWidth = 200;
@@ -19,6 +20,9 @@ export default function Home() {
           <h1>Kaylee Reed</h1>
           <TitleChanger />
         </div>
+      </div>
+      <div className={styles.aboutMe}>
+        <AboutMe />
       </div>
     </div>
   );

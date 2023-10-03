@@ -1,16 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { titles } from "@/app/utilities/content";
 
 const TitleChanger = () => {
   const [choice, setChoice] = useState(0);
-  const titles = [
-    "Web Designer",
-    "Web3 Engineer",
-    "Backend Developer",
-    "3D Artist",
-    "Average Jamie Enjoyer"
-  ];
   const [currString, setCurrString] = useState(titles[0]);
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.query {
+  padding: 10px;
+}
+
+.wrapper code {
+  font-size: 24px;
+  font-family: "Fira Code";
+}
+.output {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--background);
+  border: 2px solid var(--dark-color);
+  border-radius: 10px;
+  width: 600px;
+  font-family: "Fira Code";
+  font-size: 18px;
+  overflow: hidden;
+}
+.hidden {
+  pointer-events: none;
+}
+.shown {
+  pointer-events: all;
+}

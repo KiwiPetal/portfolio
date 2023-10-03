@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 100px;
+  height: 90vh;
+  margin-bottom: 10vh;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -30,4 +31,13 @@
   rotate: 10deg;
   scale: 1.15;
   box-shadow: black 10px 10px 10px;
+}
+
+.aboutMe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 90vh;
 }
