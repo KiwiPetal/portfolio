@@ -12,7 +12,7 @@ Currently only the text for the dynamic components
 
 ## Structure
 - [x] intro card
-- [ ] about me
+- [x] about me
 - [ ] languages/infrastructures
 - [ ] projects/partners
 - [ ] contacts

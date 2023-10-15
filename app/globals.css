@@ -13,7 +13,7 @@
   --main-color: #fd9195;
   --dark-color: #d56266;
   --light-color: #ffacaf;
-  --background: #000000;
+  --background: #0b0a0a;
   --backgroundAccent: #333333;
   --foreground: #f8f5ba;
   --font-title: "Protomolecule";
@@ -21,11 +21,13 @@
 
 .wrapper {
   height: fit-content;
+  margin: 0;
   min-height: 100%;
   color: var(--main-color);
   background-color: var(--background);
-  background-size: 40px 40px;
-  background-image: radial-gradient(rgb(253 145 149 / 5%) 10%, transparent 10%);
+  overflow-x: hidden;
+  /* background-size: 40px 40px; */
+  /* background-image: radial-gradient(rgb(253 145 149 / 10%) 10%, transparent 10%); */
 }
 
 h1 {

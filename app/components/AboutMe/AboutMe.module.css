@@ -11,13 +11,31 @@
 .wrapper code {
   font-size: 24px;
   font-family: "Fira Code";
+  position: relative;
+}
+.wrapper code::after {
+  content: "";
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  height: 100%;
+  animation: blink 1.5s infinite forwards;
+}
+@keyframes blink {
+  50% {
+    background: transparent;
+  }
+  0%,100% {
+    background: var(--main-color);
+  }
 }
 .output {
   margin-top: 20px;
   padding: 15px;
   background-color: var(--background);
-  border: 2px solid var(--dark-color);
-  border-radius: 10px;
+  border: 1px solid var(--dark-color);
   width: 600px;
   font-family: "Fira Code";
   font-size: 18px;

@@ -1,28 +1,33 @@
 "use client";
-import { useRef, useState } from "react";
-import { motion, stagger, useInView } from "framer-motion";
-import { aboutMe as text } from "@/app/utilities/content";
+import { useEffect, useRef, useState } from "react";
+import { motion, stagger, useInView, useTransform } from "framer-motion";
+import { aboutMe as text, aboutMeHeader as headerText } from "@/app/utilities/content";
 import styles from "./AboutMe.module.css";
 
 //TODO: Loading for ~3 seconds
 //Adjust margin for isInView
 const AboutMe = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -200px 0px", once: true })
+  const titleRef = useRef(null);
+  const isInView = useInView(ref, { margin: "0px 0px -50% 0px", once: true });
+  const isInViewTop = useInView(titleRef, { margin: "0px 0px -30% 0px", once: true });
   const variants = {
     hidden: {
       width: "50px",
       height: "50px",
       borderRadius: "50%",
+      opacity: 0
     },
     shown: {
       height: "fit-content",
       borderRadius: "10px",
       width: "600px",
+      opacity: 1,
       transition: {
-        duration: 0.5,
-        height: { delay: 0.5, duration: 0.5 },
+        duration: 0.8,
+        ease: [0.65,0.05,0.36,1],
+        height: { delay: 0.8, duration: 1.5, ease: [0.17,0.84,0.5,1] },
       },
     },
   };
@@ -40,17 +45,60 @@ const AboutMe = () => {
       },
     },
   }));
+
+  const characters = Array.from(headerText);
+
+  const containerVariants = {
+    hidden: { 
+    },
+    shown: {
+      transition: {
+        delay: 3,
+        staggerChildren: 0.04, 
+      }
+    }
+  }
+  const childVariants = {
+    hidden: {
+      opacity: 1,
+      display: "none",
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        duration: 0,
+      },
+    },
+    shown: {
+      opacity: 1,
+      display: "inline",
+      transition: {
+        damping: 12,
+        stiffness: 100,
+        duration: 0,
+      },
+    },
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.query}>
-        <code>$ cat ./AboutMe.md</code>
+        <motion.code
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInViewTop ? "shown" : "hidden"}
+        ref={titleRef}>$ {characters.map((character, index) => (
+        <motion.span variants={childVariants}
+      
+        key={index}>
+          {character === " " ? "\u00A0" : character}
+        </motion.span>
+        ))}</motion.code>
       </div>
       <motion.div
         ref={ref}
         variants={variants}
         initial="hidden"
         animate={isInView ? "shown" : "hidden"}
-        onClick={() => setOpen(true)}
         className={styles.output}
       >
         {lines.map((line, index) => (
@@ -59,7 +107,7 @@ const AboutMe = () => {
             key={index}
             variants={lineVariants[index]}
             initial="hidden"
-            whileInView="shown"
+            animate={isInView ? "shown" : "hidden"}
           >
             {line}
           </motion.p>
