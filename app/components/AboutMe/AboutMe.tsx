@@ -22,7 +22,7 @@ const AboutMe = () => {
     shown: {
       height: "fit-content",
       borderRadius: "10px",
-      width: "600px",
+      width: "100%",
       opacity: 1,
       transition: {
         duration: 0.8,
