@@ -21,8 +21,10 @@ export default function Home() {
           <TitleChanger />
         </div>
       </div>
-      <div className={styles.aboutMe}>
+      <div className={`${styles.section} ${styles.aboutMe}`}>
         <AboutMe />
+      </div>
+      <div className={`${styles.section} ${styles.contacts}`}>
       </div>
     </div>
   );

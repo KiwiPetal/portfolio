@@ -5,6 +5,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .query {
   padding: 10px;
 }
@@ -38,10 +39,26 @@
   padding: 15px;
   background-color: var(--background);
   border: 1px solid var(--dark-color);
-  color: var(--foreground);
+  color: var(--light-color);
   font-family: "Fira Code";
   font-size: 18px;
-  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  /* box-shadow: var(--main-color) 0px 0px 100px; */
+  animation: shadowAnimation 5s infinite;
+}
+@keyframes shadowAnimation {
+  0%, 100% {
+    box-shadow: var(--dark-color-a) 0px 10px 80px;
+  border: 1px solid var(--dark-color-a);
+  color: var(--light-color);
+  }
+  50% {
+    box-shadow: var(--foreground-a) 0px 10px 80px;
+  border: 1px solid var(--foreground-a);
+  color: var(--foreground);
+  }
 }
 .hidden {
   pointer-events: none;

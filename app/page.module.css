@@ -62,14 +62,18 @@
   box-shadow: black 10px 10px 10px;
 }
 
-.aboutMe {
+.section {
   width: 100%;
-  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   min-height: 90vh;
+}
+
+.aboutMe {
+  padding-top: 10vh;
   background-color: var(--background);
   z-index: 10;
 }
+

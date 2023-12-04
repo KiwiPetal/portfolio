@@ -8,11 +8,16 @@
 
   export const aboutMeHeader = `cat ./AboutMe.md`
 
-  export const aboutMe = `# About Me
-  Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
+export const aboutMe1 = `Typescript
+Javascript
+Rust
+Solidity`;
 
-  # My Expertise
-  - Frontend Wizardry: I whip up interfaces prettier than a peach at a summer picnic.
-  - Blockchain Enthusiast: I'm wranglin' blockchain projects and lovin' it.
-  - Tidiest Databases: I fine-tune data like tuning a guitar, making sure every string's just right.
-  - Creative Explorations: When the sun sets, I'm off in the woods, huntin' inspiration for my 3D models and sketches.`;
+export const aboutMe = `# About Me
+Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
+
+# My Expertise
+- Frontend Development: I create visually appealing interfaces that stand out.
+- Blockchain Enthusiast: I'm involved in lots of exciting blockchain projects.
+- Database Management: I have hands-on experience fine-tuning data, ensuring it operates smoothly.
+- Creative Explorations: Outside of work, I'm in love with creating 3D models, sketching and gaming.`;

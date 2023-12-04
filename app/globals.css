@@ -12,10 +12,12 @@
   /* Colors */
   --main-color: #fd9195;
   --dark-color: #d56266;
+  --dark-color-a: #d5626699;
   --light-color: #ffacaf;
   --background: #0b0a0a;
   --backgroundAccent: #333333;
   --foreground: #f8f5ba;
+  --foreground-a: #f8f5ba99;
   --font-title: "Protomolecule";
 }
 
