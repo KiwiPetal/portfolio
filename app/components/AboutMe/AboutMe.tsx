@@ -1,12 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useInView, useTransform } from "framer-motion";
-import { aboutMe as text, aboutMeHeader as headerText } from "@/app/utilities/content";
 import styles from "./AboutMe.module.css";
+
+interface vars {
+  enabled: boolean;
+  header: string;
+  description: string;
+}
 
 //TODO: Loading for ~3 seconds
 //Adjust margin for isInView
-const AboutMe = () => {
+const AboutMe = ({ enabled, header, description }: vars) => {
   // const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const titleRef = useRef(null);
@@ -32,7 +37,7 @@ const AboutMe = () => {
     },
   };
   const staggerDelay = 0.3;
-  const lines = text.split("\n");
+  const lines = description.split("\n");
   const lineVariants = lines.map((_, index) => ({
     hidden: {
       opacity: 0,
@@ -46,7 +51,7 @@ const AboutMe = () => {
     },
   }));
 
-  const characters = Array.from(headerText);
+  const characters = Array.from(header);
 
   const containerVariants = {
     hidden: { 
@@ -85,7 +90,7 @@ const AboutMe = () => {
         <motion.code
         variants={containerVariants}
         initial="hidden"
-        animate={isInViewTop ? "shown" : "hidden"}
+        animate={enabled ? isInViewTop ? "shown" : "hidden" : "hidden"}
         ref={titleRef}>$ {characters.map((character, index) => (
         <motion.span variants={childVariants}
       
@@ -98,7 +103,7 @@ const AboutMe = () => {
         ref={ref}
         variants={variants}
         initial="hidden"
-        animate={isInView ? "shown" : "hidden"}
+        animate={enabled ? isInView ? "shown" : "hidden" : "hidden"}
         className={styles.output}
       >
         {lines.map((line, index) => (

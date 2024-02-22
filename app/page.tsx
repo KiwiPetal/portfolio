@@ -4,7 +4,10 @@ import pic1 from "../public/pic1.jpg";
 import pic2 from "../public/pic2.jpg";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
+import { aboutMe, aboutMeHeader, titles } from "@/app/utilities/content";
 
+// TODO: Manage scrolling
+// TODO: Cursor animation
 export default function Home() {
   const selfieWidth = 200;
   return (
@@ -18,11 +21,11 @@ export default function Home() {
         />
         <div>
           <h1>Kaylee Reed</h1>
-          <TitleChanger />
+          <TitleChanger titles={titles} />
         </div>
       </div>
       <div className={`${styles.section} ${styles.aboutMe}`}>
-        <AboutMe />
+        <AboutMe header={aboutMeHeader} description={aboutMe} enabled />
       </div>
       <div className={`${styles.section} ${styles.contacts}`}>
       </div>

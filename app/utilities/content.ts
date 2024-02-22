@@ -1,9 +1,9 @@
   export const titles = [
     "Web Designer",
-    "Backend Developer",
+    "Front/Backend Developer",
     "Web3 Engineer",
     "3D Artist",
-    "Average Jamie Enjoyer"
+    "Neovim Enjoyer",
   ];
 
   export const aboutMeHeader = `cat ./AboutMe.md`

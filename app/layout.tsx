@@ -1,9 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { ReactLenis } from '@studio-freight/react-lenis'
 
 export const metadata: Metadata = {
   title: "Kaylee's portfolio",
-  description: 'TBD',
+  description: "TBD",
 }
 
 export default function RootLayout({
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="wrapper">{children}</body>
+      <body className="wrapper">
+        <ReactLenis root>
+          {children}
+        </ReactLenis>
+      </body>
     </html>
   )
 }
