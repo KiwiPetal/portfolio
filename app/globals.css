@@ -85,17 +85,18 @@ h1 {
   content: "";
   position: absolute;
   height: 100%;
-  width: 0%;
+  width: 100%;
   left: 0;
   top: 0;
+  opacity: 0;
   pointer-events: none;
   mix-blend-mode: difference;
   background-color: var(--dark-color);
-  transition: 0.4s ease-out, background-color 0.1s ease-in-out;
+  transition: 0.3s ease-out, background-color 0.1s ease-in-out;
   box-shadow: transparent;
 }
 .box:hover::after {
-  width: 100%;
+  opacity: 1;
   box-shadow: var(--dark-color) 0px 10px 100px;
 }
 /* .box:active::after { */
