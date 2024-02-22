@@ -22,7 +22,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
       width: "50px",
       height: "50px",
       borderRadius: "50%",
-      opacity: 0
+      opacity: 0.2
     },
     shown: {
       height: "fit-content",

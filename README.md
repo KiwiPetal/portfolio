@@ -13,4 +13,4 @@ Currently only the text for the dynamic components
 ## Structure
 - [x] intro card
 - [/] about me + languages/infrastructures
-- [ ] contacts
+- [x] contacts

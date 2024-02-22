@@ -1,0 +1,14 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.wide {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.widest {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}

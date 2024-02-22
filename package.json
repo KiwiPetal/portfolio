@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
     "@studio-freight/lenis": "^1.0.36",
     "@studio-freight/react-lenis": "^0.0.45",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^11.0.5",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

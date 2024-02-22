@@ -32,7 +32,82 @@
   /* background-image: radial-gradient(rgb(253 145 149 / 10%) 10%, transparent 10%); */
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  color: var(--foreground);
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-color: var(--foreground);
+  filter: blur(50px);
+  height: 100%;
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+svg {
+  position: absolute;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: var(--font-title);
   font-size: 44px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px;
+  font-size: 24px;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid var(--dark-color-a);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.box::after {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: var(--dark-color);
+  transition: 0.4s ease-out, background-color 0.1s ease-in-out;
+  box-shadow: transparent;
+}
+.box:hover::after {
+  width: 100%;
+  box-shadow: var(--dark-color) 0px 10px 100px;
+}
+/* .box:active::after { */
+/*   background-color: var(--foreground); */
+/*   box-shadow: var(--foreground-a) 0px 10px 100px; */
+/* } */
+
+footer {
+  overflow: hidden;
+  border-top: 1px solid var(--dark-color-a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
