@@ -9,7 +9,7 @@ interface vars {
 const TitleChanger = ({ titles }: vars) => {
   const [choice, setChoice] = useState(0);
   const [currString, setCurrString] = useState(titles[0]);
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase();
 
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -18,7 +18,7 @@ const TitleChanger = ({ titles }: vars) => {
         newChoice = 0;
       }
       let iterations = 0;
-      let modifiedWord: string = titles[choice];
+      let modifiedWord: string = titles[choice].toUpperCase();
       const glitchInterval = setInterval(() => {
         const oldCount = modifiedWord.split("").length;
         const newCount = titles[newChoice].split("").length;

@@ -8,7 +8,7 @@ export default function ParallaxItem({ children }: vars) {
     const { scrollY } = useScroll();
 
     const y = useTransform(scrollY, [0, window.innerHeight], ['1', '1.20']);
-    const scrl = useTransform(scrollY, [0, window.innerHeight], ['0%', '20%'])
+    const scrl = useTransform(scrollY, [0, window.innerHeight], ['0%', '80%'])
 
     return (
         <div style={{ overflow: "hidden" }}>

@@ -1,9 +1,9 @@
 export const titles = [
   "Frontend Developer",
-  "Backend Developer",
+  "Backend Programmer",
   "Web3 Engineer",
   "3D Artist",
-  "Neovim Fanatic",
+  "Vim Enthusiast",
 ];
 
 export const aboutMeHeader = `cat ./AboutMe.md`;
@@ -23,8 +23,8 @@ Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
 - Creative Explorations: Outside of work, I'm in love with creating 3D models, sketching and gaming.`;
 
 export const links = {
-  email: "mailto:kaylee.in.dreams@icloud.com",
-  discord: "https://discord.gg/VmTETgQ9",
+  email: "mailto:kaylee.reed@mail.com",
+  discord: "https://discordlookup.com/user/258571406302773251",
   twitter: "https://twitter.com/TheKiwiPetal",
   spotify: "https://open.spotify.com/user/space_carp",
   github: "https://github.com/KiwiPetal",

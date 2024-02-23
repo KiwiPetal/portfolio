@@ -26,7 +26,7 @@ const Contacts = () => {
     <motion.div ref={ref} variants={variants} animate={isInView ? "shown" : "hidden"}>
       <p>// Where can you find me?</p>
       <div className={styles.contacts}>
-        <a href={links.email} className={`box ${styles.widest}`}>kaylee.in.dreams@icloud.com</a>
+        <a href={links.email} className={`box ${styles.widest}`}>kaylee.reed@mail.com</a>
         <a href={links.discord} className={"box"}>Discord</a>
         <a href={links.twitter} className={"box"}>Twitter</a>
         <a href={links.spotify} className={"box"}>Spotify</a>

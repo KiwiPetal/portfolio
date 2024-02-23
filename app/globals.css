@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 @font-face {
-  font-family: "Protomolecule";
-  src: url("/Protomolecule.ttf");
+  font-family: "HeadHuman";
+  src: url("/MajorMono.ttf");
 }
 
 :root {
@@ -18,7 +18,7 @@
   --backgroundAccent: #333333;
   --foreground: #f8f5ba;
   --foreground-a: #f8f5ba99;
-  --font-title: "Protomolecule";
+  --font-title: "HeadHuman";
 }
 
 .wrapper {
