@@ -69,12 +69,12 @@ h1 {
 }
 
 .box {
-  display: flex;
+  flex-grow: 1;
   flex-direction: row;
   padding: 15px 25px;
   font-size: 24px;
-  align-items: center;
-  justify-content: space-evenly;
+  overflow-wrap: break-word;
+  text-align: center;
   border: 1px solid var(--dark-color-a);
   border-radius: 10px;
   position: relative;
@@ -111,4 +111,7 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
 }

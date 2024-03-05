@@ -27,7 +27,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
     shown: {
       height: "fit-content",
       borderRadius: "10px",
-      width: "100%",
+      width: "fit-content",
       opacity: 1,
       transition: {
         duration: 0.8,
@@ -41,7 +41,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
   const lineVariants = lines.map((_, index) => ({
     hidden: {
       opacity: 0,
-      width: "600px",
+      // width: "600px",
     },
     shown: {
       opacity: 1,
@@ -66,7 +66,6 @@ const AboutMe = ({ enabled, header, description }: vars) => {
   const childVariants = {
     hidden: {
       opacity: 1,
-      display: "none",
       transition: {
         type: "spring",
         damping: 12,
@@ -76,7 +75,6 @@ const AboutMe = ({ enabled, header, description }: vars) => {
     },
     shown: {
       opacity: 1,
-      display: "inline",
       transition: {
         damping: 12,
         stiffness: 100,

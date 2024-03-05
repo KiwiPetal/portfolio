@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   min-height: 60vh;
-  width: min(600px, 100%);
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -17,6 +17,7 @@
   position: relative;
   white-space: nowrap;
 }
+
 .wrapper code::after {
   content: "";
   background: var(--main-color);
@@ -27,14 +28,18 @@
   height: 100%;
   animation: blink 1.2s infinite forwards;
 }
+
 @keyframes blink {
   50% {
     background: transparent;
   }
-  0%,100% {
+
+  0%,
+  100% {
     background: var(--main-color);
   }
 }
+
 .output {
   margin-top: 20px;
   padding: 15px;
@@ -45,24 +50,41 @@
   font-size: 18px;
   position: relative;
   z-index: 100;
-  /* box-shadow: var(--main-color) 0px 0px 100px; */
   animation: shadowAnimation 5s infinite;
+  margin: 30px;
+  max-width: 600px;
 }
+
 @keyframes shadowAnimation {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: var(--dark-color-a) 0px 10px 80px;
-  border: 1px solid var(--dark-color-a);
-  color: var(--light-color);
+    border: 1px solid var(--dark-color-a);
+    color: var(--light-color);
   }
+
   50% {
     box-shadow: var(--foreground-a) 0px 10px 80px;
-  border: 1px solid var(--foreground-a);
-  color: var(--foreground);
+    border: 1px solid var(--foreground-a);
+    color: var(--foreground);
   }
 }
+
 .hidden {
   pointer-events: none;
 }
+
 .shown {
   pointer-events: all;
+}
+
+@media screen and (max-width: 700px) {
+  /* .wrapper { */
+  /*   display: flex; */
+  /*   min-height: 60vh; */
+  /*   width: min(600px, 100%); */
+  /*   flex-direction: column; */
+  /*   justify-content: flex-start; */
+  /*   align-items: center; */
+  /* } */
 }

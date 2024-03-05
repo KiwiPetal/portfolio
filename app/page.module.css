@@ -46,7 +46,10 @@
   height: 60px;
   width: 100%;
   inline-size: 100%;
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
+}
+.title h1.important {
+  height: auto !important;
 }
 .title > div {
   display: flex;
@@ -119,7 +122,11 @@
 }
 
 .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10vh 0;
+  width: 100%;
   background-color: var(--background);
 }
 
@@ -133,5 +140,8 @@
   }
   .title > img {
     display: none;
+  }
+  .title h1 {
+    font-size: 2rem;
   }
 }
