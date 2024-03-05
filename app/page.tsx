@@ -1,14 +1,11 @@
 "use client";
 import styles from "./page.module.css";
 import Image from "@/node_modules/next/image";
-import pic1 from "../public/pic1.jpg";
-import pic2 from "../public/pic2.jpg";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
-import { aboutMe, aboutMeHeader, titles } from "@/app/utilities/content";
+import { aboutMe, aboutMeHeader, links, titles } from "@/app/utilities/content";
 import ReactLenis from "@studio-freight/react-lenis";
 import ParallaxItem from "./components/Parallax/Parallax";
-import Link from "next/link";
 import Contacts from "./components/Contacts/Contacts";
 
 // TODO: Scroll to Contacts
@@ -34,7 +31,7 @@ export default function Home() {
               src="/pic1.webp"
             />
             <div>
-              <h1>Kaylee Reed</h1>
+              <h1 className={styles.important}>Kaylee Reed</h1>
               <TitleChanger titles={titles} />
             </div>
           </div>
@@ -44,7 +41,7 @@ export default function Home() {
             <AboutMe header={aboutMeHeader} description={aboutMe} enabled />
           </div>
           <div id="contacts" className={styles.section}>
-            <Contacts />
+            <Contacts links={links} />
           </div>
           {/* <div className={`${styles.section} ${styles.contacts}`}></div> */}
           <footer>

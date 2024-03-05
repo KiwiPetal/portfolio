@@ -1,6 +1,11 @@
+.wrapper {
+  margin: 30px;
+  max-width: fit-content;
+  width: min(100%, 600px);
+}
 .contacts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 

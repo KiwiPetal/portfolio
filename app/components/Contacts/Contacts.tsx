@@ -1,9 +1,12 @@
 import styles from "./Contacts.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {links} from "@/app/utilities/content";
+import { ILinks } from "@/app/utilities/content";
 
-const Contacts = () => {
+interface vars {
+  links: ILinks
+}
+const Contacts = ({ links }: vars) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -33% 0px", once: true });
 
@@ -23,15 +26,15 @@ const Contacts = () => {
   }
 
   return (
-    <motion.div ref={ref} variants={variants} animate={isInView ? "shown" : "hidden"}>
+    <motion.div ref={ref} variants={variants} className={styles.wrapper} animate={isInView ? "shown" : "hidden"}>
       <p>// Where can you find me?</p>
       <div className={styles.contacts}>
-        <a href={links.email} className={`box ${styles.widest}`}>kaylee.reed@mail.com</a>
-        <a href={links.discord} className={"box"}>Discord</a>
-        <a href={links.twitter} className={"box"}>Twitter</a>
-        <a href={links.spotify} className={"box"}>Spotify</a>
-        <a href={links.github} className={`box ${styles.wide}`}>Github</a>
-        <a href={links.gitlab} className={"box"}>Gitlab</a>
+        {Object.keys(links).map(link => {
+          let _link = links[link];
+          return (
+            <a href={_link.link} className="box">{_link.name}</a>
+          )
+        })}
       </div>
     </motion.div>
   );
