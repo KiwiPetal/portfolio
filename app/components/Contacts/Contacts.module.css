@@ -3,6 +3,9 @@
   max-width: fit-content;
   width: min(100%, 600px);
 }
+.comment {
+  font-family: "Fira Code";
+}
 .contacts {
   display: flex;
   flex-wrap: wrap;

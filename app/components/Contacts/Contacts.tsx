@@ -27,7 +27,7 @@ const Contacts = ({ links }: vars) => {
 
   return (
     <motion.div ref={ref} variants={variants} className={styles.wrapper} animate={isInView ? "shown" : "hidden"}>
-      <p>{"// Where can you find me?"}</p>
+      <p className={styles.comment}>{"// Where can you find me?"}</p>
       <div className={styles.contacts}>
         {Object.keys(links).map(link => {
           let _link = links[link];
