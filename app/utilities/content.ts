@@ -12,7 +12,7 @@ export const aboutMe = `# About Me
 Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
 
 # My Expertise
-- Frontend Development: React.JS, Next.JS.
+- Frontend Development: React.JS, Next.JS, Flutter.
 - Backend Creation: Express.JS, Sequelize, Python.
 - Blockchain Enthusiast: Solidity, Rust.
 - Database Management: MySQL, MariaDB, ClickHouse.
