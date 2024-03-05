@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Kaylee's portfolio",
-  description: "TBD",
+  description: "TBD"
 }
 export default function RootLayout({
   children,

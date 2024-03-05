@@ -133,13 +133,14 @@
 @media screen and (max-width: 700px) {
   .title {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
   }
   .title h1 {
     text-align: center;
   }
-  .title > img {
-    display: none;
+  .title > div {
+    justify-content: flex-start;
   }
   .title h1 {
     font-size: 2rem;
