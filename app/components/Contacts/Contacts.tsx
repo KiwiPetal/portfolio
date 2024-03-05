@@ -27,12 +27,12 @@ const Contacts = ({ links }: vars) => {
 
   return (
     <motion.div ref={ref} variants={variants} className={styles.wrapper} animate={isInView ? "shown" : "hidden"}>
-      <p>// Where can you find me?</p>
+      <p>{"// Where can you find me?"}</p>
       <div className={styles.contacts}>
         {Object.keys(links).map(link => {
           let _link = links[link];
           return (
-            <a href={_link.link} className="box">{_link.name}</a>
+            <a href={_link.link} key={_link.name + "_link"} className="box">{_link.name}</a>
           )
         })}
       </div>
