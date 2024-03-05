@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Major+Mono+Display&family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&family=Russo+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Major+Mono+Display&family=Pacifico&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&family=Russo+One&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 @font-face {
@@ -73,6 +73,7 @@ h1 {
   flex-grow: 1;
   flex-direction: row;
   padding: 15px 25px;
+  font-family: "Fira Code";
   font-size: 24px;
   overflow-wrap: break-word;
   text-align: center;
@@ -113,6 +114,7 @@ footer {
   align-items: center;
   width: 100%;
   text-align: center;
+  font-family: "Fira Code";
   font-size: 16px;
   padding: 30px;
 }
