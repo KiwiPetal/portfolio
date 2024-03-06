@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 @font-face {
-  font-family: "HeadHuman";
+  font-family: "MajorMono";
   src: url("/MajorMono.ttf");
 }
 
@@ -18,7 +18,7 @@
   --backgroundAccent: #333333;
   --foreground: #f8f5ba;
   --foreground-a: #f8f5ba99;
-  --font-title: "HeadHuman";
+  --font-title: "MajorMono";
 }
 
 .wrapper {
