@@ -47,7 +47,7 @@ Layout of the page. Used only for Metadata
 `./app/globals.css`
 Global css rules. Colours/Fonts
 
-## Structure
+## TODOs
 - [x] intro card
 - [x] about me
 - [x] contacts
