@@ -66,6 +66,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
   const childVariants = {
     hidden: {
       opacity: 1,
+      display: "none",
       transition: {
         type: "spring",
         damping: 12,
@@ -75,6 +76,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
     },
     shown: {
       opacity: 1,
+      display: "inline",
       transition: {
         damping: 12,
         stiffness: 100,

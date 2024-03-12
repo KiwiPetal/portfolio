@@ -18,7 +18,7 @@ Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
 - Database Management: MySQL, MariaDB, ClickHouse.
 - Creative Explorations: 3D Art, Sketching, Music, Gaming.`;
 
-export const links: ILinks = {
+export const links: Record<string, ILink> = {
   email: {
     name: "kaylee.reed@mail.com",
     link: "mailto:kaylee.reed@mail.com",
@@ -49,6 +49,11 @@ export interface ILink {
   name: string;
   link: string;
 }
-export interface ILinks {
-  [key: string]: ILink
+export type ContentTypes = "project" | "art";
+
+export interface IContent {
+  name: string;
+  description: string | undefined;
+  src: string;
+  type: ContentTypes
 }

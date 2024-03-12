@@ -19,13 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <svg>
-        <filter id="grainy">
-          <feTurbulence type="turbulence" baseFrequency="0.65" />
-        </filter>
-      </svg>
       <body className="wrapper">
-          {children}
+        <svg>
+          <filter id="grainy">
+            <feTurbulence type="turbulence" baseFrequency="0.65" />
+          </filter>
+        </svg>
+        {children}
       </body>
     </html>
   )
