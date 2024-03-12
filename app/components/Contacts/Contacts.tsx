@@ -24,19 +24,37 @@ const Contacts = ({ links }: vars) => {
       },
     }
   }
+  const staggerDelay = 0.2
+  const contactVariants = Object.keys(links).map((_, i) => (
+    {
+      hidden: {
+        opacity: 0,
+        x: "-20%",
+      },
+      shown: {
+        opacity: 1,
+        x: "0px",
+        transition: {
+          delay: i * staggerDelay,
+          duration: 1.5,
+          ease: [0.65, 0.05, 0.36, 1],
+        },
+      }
+    }
+  ))
 
   return (
-    <motion.div ref={ref} variants={variants} className={styles.wrapper} animate={isInView ? "shown" : "hidden"}>
+    <div ref={ref} className={styles.wrapper}>
       <p className={styles.comment}>{"// Where can you find me?"}</p>
       <div className={styles.contacts}>
-        {Object.keys(links).map(link => {
+        {Object.keys(links).map((link, i) => {
           let _link = links[link];
           return (
-            <a href={_link.link} key={_link.name + "_link"} className="box">{_link.name}</a>
+            <motion.a variants={contactVariants[i]} initial="hidden" animate={isInView ? "shown" : "hidden"} href={_link.link} key={_link.name + "_link"} className="box">{_link.name}</motion.a>
           )
         })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
