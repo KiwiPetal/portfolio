@@ -1,10 +1,10 @@
 import styles from "./Contacts.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ILinks } from "@/app/utilities/content";
+import { ILink } from "@/app/utilities/content";
 
 interface vars {
-  links: ILinks
+  links: Record<string, ILink>
 }
 const Contacts = ({ links }: vars) => {
   const ref = useRef(null);
