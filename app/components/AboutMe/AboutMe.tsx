@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useInView, useTransform } from "framer-motion";
 import styles from "./AboutMe.module.css";
+import Code from "../Code/Code";
 
 interface vars {
   enabled: boolean;
@@ -86,19 +87,7 @@ const AboutMe = ({ enabled, header, description }: vars) => {
   };
   return (
     <div className={styles.wrapper}>
-      <div className={styles.query}>
-        <motion.code
-        variants={containerVariants}
-        initial="hidden"
-        animate={enabled ? isInViewTop ? "shown" : "hidden" : "hidden"}
-        ref={titleRef}>$ {characters.map((character, index) => (
-        <motion.span variants={childVariants}
-      
-        key={index}>
-          {character === " " ? "\u00A0" : character}
-        </motion.span>
-        ))}</motion.code>
-      </div>
+        <Code text={header} enabled titleRef={titleRef} style="m" isInView={isInViewTop} terminal />
       <motion.div
         ref={ref}
         variants={variants}
