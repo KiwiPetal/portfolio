@@ -51,5 +51,5 @@ Global css rules. Colours/Fonts
 - [x] intro card
 - [x] about me
 - [x] contacts
-- [ ] Horizontal scroll for finished stuff
+- [ ] Additional bars for finished products
 - [ ] API integration
