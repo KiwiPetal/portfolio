@@ -7,28 +7,6 @@
   align-items: center;
 }
 
-.query {
-  padding: 10px;
-}
-
-.wrapper code {
-  font-size: 24px;
-  font-family: "Fira Code";
-  position: relative;
-  white-space: nowrap;
-}
-
-.wrapper code::after {
-  content: "";
-  background: var(--main-color);
-  position: absolute;
-  top: 0;
-  right: -5px;
-  width: 2px;
-  height: 100%;
-  animation: blink 1.2s infinite forwards;
-}
-
 @keyframes blink {
   50% {
     background: transparent;

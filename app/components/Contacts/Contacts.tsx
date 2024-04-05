@@ -7,6 +7,7 @@ interface vars {
   links: Record<string, ILink>
 }
 const Contacts = ({ links }: vars) => {
+  const titleRef = useRef(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -33% 0px", once: true });
 
@@ -45,7 +46,7 @@ const Contacts = ({ links }: vars) => {
 
   return (
     <div ref={ref} className={styles.wrapper}>
-      <p className={styles.comment}>{"// Where can you find me?"}</p>
+      <Code text="// Where can you find me?" enabled isInView={isInView} titleRef={titleRef} style="s" />
       <div className={styles.contacts}>
         {Object.keys(links).map((link, i) => {
           let _link = links[link];
