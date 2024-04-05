@@ -1,0 +1,39 @@
+.query {
+  padding: 10px;
+}
+
+.query code {
+  font-family: "Fira Code";
+  position: relative;
+  white-space: nowrap;
+}
+
+.m {
+  font-size: 24px;
+}
+
+.s {
+  font-size: 18px;
+}
+
+.query code::after {
+  content: "";
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  height: 100%;
+  animation: blink 1.2s infinite forwards;
+}
+
+@keyframes blink {
+  50% {
+    background: transparent;
+  }
+
+  0%,
+  100% {
+    background: var(--main-color);
+  }
+}
