@@ -2,6 +2,7 @@ import styles from "./Contacts.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ILink } from "@/app/utilities/content";
+import Code from "../Code/Code";
 
 interface vars {
   links: Record<string, ILink>
