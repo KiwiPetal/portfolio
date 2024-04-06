@@ -56,13 +56,3 @@
   pointer-events: all;
 }
 
-@media screen and (max-width: 700px) {
-  /* .wrapper { */
-  /*   display: flex; */
-  /*   min-height: 60vh; */
-  /*   width: min(600px, 100%); */
-  /*   flex-direction: column; */
-  /*   justify-content: flex-start; */
-  /*   align-items: center; */
-  /* } */
-}
