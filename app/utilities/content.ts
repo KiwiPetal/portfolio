@@ -1,3 +1,4 @@
+
 export const titles = [
   "Frontend Developer",
   "Backend Programmer",
@@ -39,21 +40,74 @@ export const links: Record<string, ILink> = {
     name: "Twitter",
     link: "https://twitter.com/TheKiwiPetal",
   },
-  spotify: {
-    name: "Spotify",
-    link: "https://open.spotify.com/user/space_carp",
-  },
+}
+
+export const content: Record<ContentTypes, IContent[]> = {
+  art: [
+    {
+      name: "Blender",
+      src: "/pics/ring.png"
+    },
+    {
+      name: "Blender",
+      src: "/pics/anvil.png"
+    },
+    {
+      name: "Blender",
+      src: "/pics/donut.png"
+    },
+    {
+      name: "Adobe Illustrator",
+      src: "/pics/mask.png"
+    },
+    {
+      name: "Adobe Illustrator",
+      src: "/pics/mask2.png"
+    },
+  ],
+  project: [
+    {
+      name: "Prime Delivery - landing page",
+      description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot. Connected with an admin panel.",
+      src: "/pics/PrimeDelivery.png"
+    },
+    {
+      name: "Prime Delivery - dashboard",
+      description: "Admin panel that shows business statistics and information from the shift manager.",
+      src: "/pics/PrimeDelivery-dashboard.png"
+    },
+    {
+      name: "Astrodiggers - landing page",
+      description: "A crypto project for which I had a pleasure of building 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
+      src: "/pics/Astrodiggers.png"
+    },
+    {
+      name: "Astrodiggers - dashboard",
+      src: "/pics/Astrodiggers-dashboard.png"
+    },
+    {
+      name: "Soldatiki",
+      description: "Another crypto project where I've built Frontend, Backend and smart contracts",
+      src: "/pics/Soldatiki.png"
+    },
+    {
+      name: "Soldatiki 2.0",
+      description: "Redesign of Soldatiki with a complete Backend and Frontend overhaul.",
+      src: "/pics/Soldatiki2.png"
+    }
+  ]
 }
 
 export interface ILink {
   name: string;
   link: string;
 }
-export type ContentTypes = "project" | "art";
+
+export type ContentTypes = 
+  "project" | "art";
 
 export interface IContent {
-  name: string;
-  description: string | undefined;
+  name?: string;
+  description?: string;
   src: string;
-  type: ContentTypes
 }

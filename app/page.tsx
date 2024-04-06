@@ -3,10 +3,11 @@ import styles from "./page.module.css";
 import Image from "@/node_modules/next/image";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
-import { aboutMe, aboutMeHeader, links, titles } from "@/app/utilities/content";
+import { aboutMe, aboutMeHeader, content, links, titles } from "@/app/utilities/content";
 import ReactLenis from "@studio-freight/react-lenis";
 import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
+import Gallery from "./components/Gallery/Gallery";
 
 // TODO: Scroll to Contacts
 export default function Home() {
@@ -39,6 +40,10 @@ export default function Home() {
         <div className={styles._wrapper}>
           <div className={styles.section}>
             <AboutMe header={aboutMeHeader} description={aboutMe} enabled />
+          </div>
+          <div className={styles.section}>
+            <Gallery name="Projects" content={content.project} />
+            <Gallery name="Art" content={content.art} />
           </div>
           <div id="contacts" className={styles.section}>
             <Contacts links={links} />

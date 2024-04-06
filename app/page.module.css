@@ -120,9 +120,24 @@
   background: #000000;
   filter: url(#grainy);
 }
+.nav {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-color: blue;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
 
 .section {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   padding: 10vh 0;
