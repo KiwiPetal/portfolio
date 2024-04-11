@@ -3,7 +3,7 @@ import {IContent} from "@/app/utilities/content"
 import Image from "@/node_modules/next/image";
 import { motion, useInView } from "framer-motion";
 import styles from "./Gallery.module.css"
-import {useRef, useState} from "react"
+import {createRef, useEffect, useRef, useState} from "react"
 
 interface vars {
   name: string,
@@ -16,6 +16,8 @@ export default function Gallery({ name, content }: vars) {
   const length = content.length;
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const slideRefs = useRef(content.map(() => createRef()));
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "0px 0px -30% 0px", once: true });
   const containerVariants = {
@@ -51,7 +53,7 @@ export default function Gallery({ name, content }: vars) {
       opacity: 0,
     },
     visible: {
-      height: "fit-content",
+      height: containerHeight,
       opacity: 1,
       transition: {
         height: { duration: 1.5, ease: [0.17,0.84,0.5,1] },
@@ -100,6 +102,15 @@ export default function Gallery({ name, content }: vars) {
       setTranslateX(0);
     }
   };
+
+  useEffect(() => {
+    const currentRef = slideRefs.current[current];
+    if (currentRef && currentRef.current) {
+      const height = (currentRef.current as HTMLElement).offsetHeight;
+      setContainerHeight(height);
+    }
+  }, [current])
+
   return (
     <motion.div variants={containerVariants} animate={isInView ? "visible" : "hidden"} className={styles.wrapper}>
       <motion.div 
@@ -112,15 +123,19 @@ export default function Gallery({ name, content }: vars) {
         <div 
           onClick={() => setCurrent(current + 1 >= length ? 0 : current + 1)}>{">"}</div>
       </motion.div>
-      <div className={styles.bar}>
+      <div className={styles.bar}
+      >
         <div className={styles.top} onClick={() => setOpen(!open)}>
           <p>
             {!open ? name : content[current].name ? content[current].name : name}
           </p>
           <div className={`${styles.tick} ${open ? "" : styles.active}`} />
         </div>
-        <motion.div variants={childVariants} 
-        animate={open ? "visible" : "hidden"} className={`${styles.child}`}>
+        <motion.div 
+          variants={childVariants} 
+          animate={open ? "visible" : "hidden"} 
+          className={`${styles.child}`}
+          >
           <div
             className={styles.drag}
             ref={containerRef}
@@ -133,6 +148,8 @@ export default function Gallery({ name, content }: vars) {
               return (
                 <div
                   key={"card" + i}
+                  // @ts-ignore
+                  ref={slideRefs.current[i]}
                   style={{
                     transform: `translateX(-${current * 100
                       }%) translateX(${translateX}px)`,

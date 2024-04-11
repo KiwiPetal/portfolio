@@ -12,18 +12,44 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   position: absolute;
+  border: 1px solid var(--dark-color-a);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 25px;
   top: 50%;
   z-index: 1;
   font-weight: 700;
   transform: translate(0%, -50%);
 }
+.nav > div::after {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: var(--dark-color);
+  transition: 0.3s ease-out, background-color 0.1s ease-in-out;
+  box-shadow: transparent;
+}
+.nav > div:hover::after {
+  opacity: 1;
+  box-shadow: var(--dark-color) 0px 10px 100px;
+}
 .nav > div:first-child {
-  left: -30px;
+  left: -35px;
   font-size: 32px;
 }
 .nav > div:last-child {
   font-size: 32px;
-  right: -30px;
+  right: -35px;
 }
 .bar {
   width: 100%;
@@ -94,20 +120,18 @@
   border-top: 1px solid var(--dark-color-a);
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   align-items: center;
-  justify-content: space-around;
-  /* justify-content: space-evenly; */
-  /* justify-content: center; */
+  justify-content: flex-start;
   width: 100%;
   flex-shrink: 0;
-  height: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
   transition: inherit;
 }
 .card > img {
   max-width: 90%;
 
-  max-height: 550px;
+  max-height: 800px;
   object-fit: cover;
   border-radius: 20px;
   pointer-events: none;
