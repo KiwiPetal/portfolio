@@ -144,6 +144,42 @@
   pointer-events: none;
 }
 
+.pipsWrapper {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.pips {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.pip {
+  background-color: transparent;
+  height: 10px;
+  border: var(--main-color) 3px solid;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.activePip {
+  --length: 1;
+  --current: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: var(--main-color);
+  left: calc((100% + 5px) / var(--length) * var(--current));
+  /* left: calc((100% + 5px) / 6 * 5); */
+  /* left: (100% + 5px) / var(--length) * var(--current); */
+  transition: all cubic-bezier(0.65,0.05,0.36,1) 0.35s;
+  box-shadow: var(--main-color) 0px 0px 20px;
+}
+
 .closed {
   max-height: 0;
 }

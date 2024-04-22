@@ -3,7 +3,7 @@ import {IContent} from "@/app/utilities/content"
 import Image from "@/node_modules/next/image";
 import { motion, useInView } from "framer-motion";
 import styles from "./Gallery.module.css"
-import {createRef, useEffect, useRef, useState} from "react"
+import React, {createRef, useEffect, useRef, useState} from "react"
 
 interface vars {
   name: string,
@@ -20,6 +20,18 @@ export default function Gallery({ name, content }: vars) {
   const slideRefs = useRef(content.map(() => createRef()));
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "0px 0px -30% 0px", once: true });
+  const pipVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.65,0.05,0.36,1],
+      },
+    }
+  }
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -155,7 +167,7 @@ export default function Gallery({ name, content }: vars) {
                       }%) translateX(${translateX}px)`,
                   }}
                   className={
-                    `${styles.card} ${current != i ? styles.hidden : ""}`
+                    `${styles.card} ${current != i && styles.hidden}`
                   }>
                   <p>
                     {card.description}
@@ -167,6 +179,25 @@ export default function Gallery({ name, content }: vars) {
           </div>
         </motion.div>
       </div>
+      <motion.div 
+        variants={pipVariants}
+        animate={open ? "visible" : "hidden"}
+        className={styles.pipsWrapper}>
+        <div className={styles.pips}>
+          {content.map((_, i) => {
+            return (
+              <div
+                key={"pip" + i}
+                onClick={() => setCurrent(i)}
+                className={`${styles.pip}`} />
+            )
+          })}
+          <div 
+            className={`${styles.pip} ${styles.activePip}`}
+            style={{ '--length': length, '--current': current } as React.CSSProperties}
+            />
+        </div>
+      </motion.div>
     </motion.div>
   )
 }
