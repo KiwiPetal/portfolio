@@ -36,10 +36,6 @@ export const links: Record<string, ILink> = {
     name: "Gitlab",
     link: "https://gitlab.com/KiwiPetal",
   },
-  twitter: {
-    name: "Twitter",
-    link: "https://twitter.com/TheKiwiPetal",
-  },
 }
 
 export const content: Record<ContentTypes, IContent[]> = {
