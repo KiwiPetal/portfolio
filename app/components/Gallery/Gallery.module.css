@@ -173,10 +173,8 @@
   pointer-events: none;
   background-color: var(--main-color);
   left: calc((100% + 5px) / var(--length) * var(--current));
-  /* left: calc((100% + 5px) / 6 * 5); */
-  /* left: (100% + 5px) / var(--length) * var(--current); */
-  transition: all cubic-bezier(0.65,0.05,0.36,1) 0.35s;
-  box-shadow: var(--main-color) 0px 0px 20px;
+  transition: all cubic-bezier(0.17,0.84,0.5,1) 0.8s;
+  box-shadow: var(--main-color) 0px 0px 15px;
 }
 
 .closed {
