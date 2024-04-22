@@ -144,6 +144,39 @@
   pointer-events: none;
 }
 
+.pipsWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.pips {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.pip {
+  background-color: transparent;
+  height: 10px;
+  border: var(--main-color) 3px solid;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.activePip {
+  --length: 1;
+  --current: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: var(--main-color);
+  left: calc((100% + 5px) / var(--length) * var(--current));
+  transition: all cubic-bezier(0.17,0.84,0.5,1) 0.8s;
+  box-shadow: var(--main-color) 0px 0px 15px;
+}
+
 .closed {
   max-height: 0;
 }
