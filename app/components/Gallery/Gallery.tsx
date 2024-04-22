@@ -23,10 +23,17 @@ export default function Gallery({ name, content }: vars) {
   const pipVariants = {
     hidden: {
       opacity: 0,
+      maxHeight: "0px",
+      y: "-15px",
+      marginTop: "0px"
     },
     visible: {
       opacity: 1,
+      maxHeight: "100%",
+      y: "0px",
+      marginTop: "10px",
       transition: {
+        delay: 0.7,
         duration: 1,
         ease: [0.65,0.05,0.36,1],
       },
