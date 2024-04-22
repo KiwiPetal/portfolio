@@ -161,6 +161,7 @@
 .pip {
   background-color: transparent;
   height: 10px;
+  width: 10px;
   border: var(--main-color) 3px solid;
   aspect-ratio: 1/1;
   border-radius: 50%;
