@@ -63,22 +63,23 @@ export const content: Record<ContentTypes, IContent[]> = {
   ],
   project: [
     {
-      name: "Prime Delivery - landing page",
+      name: "Prime Delivery",
       description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot. Connected with an admin panel.",
       src: "/pics/PrimeDelivery.png"
     },
     {
-      name: "Prime Delivery - dashboard",
+      name: "Prime Delivery",
       description: "Admin panel that shows business statistics and information from the shift manager.",
       src: "/pics/PrimeDelivery-dashboard.png"
     },
     {
-      name: "Astrodiggers - landing page",
-      description: "A crypto project for which I had a pleasure of building 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
+      name: "Astrodiggers",
+      description: "A crypto project for which I've built 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
       src: "/pics/Astrodiggers.png"
     },
     {
-      name: "Astrodiggers - dashboard",
+      name: "Astrodiggers",
+      description: "Client dashboard of the project",
       src: "/pics/Astrodiggers-dashboard.png"
     },
     {
