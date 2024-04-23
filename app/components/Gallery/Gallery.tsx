@@ -174,12 +174,14 @@ export default function Gallery({ name, content }: vars) {
                       }%) translateX(${translateX}px)`,
                   }}
                   className={
-                    `${styles.card} ${current != i && styles.hidden}`
+                    `${styles.card}`
                   }>
-                  <p>
-                    {card.description}
-                  </p>
-                  <img alt={card.name ? card.name : ""} src={card.src} />
+                  <div>
+                    <p>
+                      {card.description}
+                    </p>
+                    <img alt={card.name ? card.name : ""} src={card.src} />
+                  </div>
                 </div>
               )
             })}
