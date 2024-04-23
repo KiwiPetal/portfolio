@@ -147,15 +147,37 @@
   align-items: center;
   justify-content: flex-start;
 }
-.card > div > img {
-  max-width: 100%;
+.card > div > div {
+  position: relative;
+}
+
+.card img + div {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--dark-color-a);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  height: 25px;
+  width: 25px;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 
   max-height: 800px;
-  object-fit: cover;
-  border-radius: 20px;
+  object-fit: cover !important;
+  border-radius: 10px;
   pointer-events: none;
 }
-.card > div > p {
+.card p {
   font-family: "Fira Code";
   font-size: 20px;
   word-break: break-word;
