@@ -3,6 +3,7 @@ import {IContent} from "@/app/utilities/content"
 import Image from "@/node_modules/next/image";
 import { motion, useInView } from "framer-motion";
 import styles from "./Gallery.module.css"
+import LaunchIcon from '@mui/icons-material/Launch';
 import React, {createRef, useEffect, useRef, useState} from "react"
 
 interface vars {
@@ -174,12 +175,17 @@ export default function Gallery({ name, content }: vars) {
                       }%) translateX(${translateX}px)`,
                   }}
                   className={
-                    `${styles.card} ${current != i && styles.hidden}`
+                    `${styles.card}`
                   }>
-                  <p>
-                    {card.description}
-                  </p>
-                  <img alt={card.name ? card.name : ""} src={card.src} />
+                  <div>
+                    <p>
+                      {card.description}
+                    </p>
+                    <div>
+                      <Image layout="fill" alt={card.name ? card.name : ""} src={card.src} />
+                      <div onClick={() => window.open(card.src)}><LaunchIcon /></div>
+                    </div>
+                  </div>
                 </div>
               )
             })}

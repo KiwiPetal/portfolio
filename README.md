@@ -52,6 +52,6 @@ Global css rules. Colours/Fonts
 - [x] about me
 - [x] contacts
 - [x] Additional bars for finished products
-- [ ] Rework bars for finished products
-- [ ] Optimize images
+- [x] Rework bars for finished products
+- [x] Optimize images
 - [ ] API integration
