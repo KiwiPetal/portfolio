@@ -53,5 +53,5 @@ Global css rules. Colours/Fonts
 - [x] contacts
 - [x] Additional bars for finished products
 - [x] Rework bars for finished products
-- [ ] Optimize images
+- [x] Optimize images
 - [ ] API integration
