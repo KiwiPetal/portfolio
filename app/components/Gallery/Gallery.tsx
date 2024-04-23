@@ -182,7 +182,7 @@ export default function Gallery({ name, content }: vars) {
                       {card.description}
                     </p>
                     <div>
-                      <Image layout="fill" alt={card.name ? card.name : ""} src={card.src} />
+                      <img alt={card.name ? card.name : ""} src={card.src} />
                       <div onClick={() => window.open(card.src)}><LaunchIcon /></div>
                     </div>
                   </div>
