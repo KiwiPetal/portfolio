@@ -24,6 +24,10 @@ export const links: Record<string, ILink> = {
     name: "kaylee.reed@mail.com",
     link: "mailto:kaylee.reed@mail.com",
   },
+  cv: {
+    name: "My CV",
+    link: "/files/Kaylee Reed - CV.pdf"
+  },
   discord: {
     name: "Discord",
     link: "https://discordlookup.com/user/258571406302773251",
@@ -35,6 +39,10 @@ export const links: Record<string, ILink> = {
   gitlab: {
     name: "Gitlab",
     link: "https://gitlab.com/KiwiPetal",
+  },
+  linkedin: {
+    name: "LinkedIn",
+    link: "https://linkedin.com/in/kiwipetal"
   },
 }
 
