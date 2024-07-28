@@ -93,13 +93,8 @@ export const content: Record<ContentTypes, IContent[]> = {
     {
       name: "Soldatiki",
       description: "Another crypto project where I've built Frontend, Backend and smart contracts",
-      src: "/pics/Soldatiki.png"
-    },
-    {
-      name: "Soldatiki 2.0",
-      description: "Redesign of Soldatiki with a complete Backend and Frontend overhaul.",
       src: "/pics/Soldatiki2.png"
-    }
+    },
   ]
 }
 
