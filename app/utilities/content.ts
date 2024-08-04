@@ -21,8 +21,8 @@ Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
 
 export const links: Record<string, ILink> = {
   email: {
-    name: "kaylee.reed@mail.com",
-    link: "mailto:kaylee.reed@mail.com",
+    name: "kaylee.reed@little-kiwi.net",
+    link: "mailto:kaylee.reed@little-kiwi.net",
   },
   cv: {
     name: "My CV",
