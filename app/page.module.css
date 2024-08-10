@@ -51,6 +51,23 @@
 .title h1.important {
   height: auto !important;
 }
+.line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--foreground) 100%
+  );
+  opacity: 0.5;
+}
+.title .smallerTitle {
+  font-size: 32px;
+  height: auto;
+}
+.title .detailTitle {
+  font-size: 24px;
+}
 .title > div {
   display: flex;
   max-width: 90%;
