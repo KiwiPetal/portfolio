@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 interface vars {
   titles: string[];
-  className: string;
+  className?: string;
 }
 
 const TitleChanger = ({ titles, className }: vars) => {
