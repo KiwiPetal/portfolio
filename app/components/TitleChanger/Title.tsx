@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 
 interface vars {
-  titles: string[]
+  titles: string[];
+  className: string;
 }
 
-const TitleChanger = ({ titles }: vars) => {
+const TitleChanger = ({ titles, className }: vars) => {
   const [choice, setChoice] = useState(0);
   const [currString, setCurrString] = useState(titles[0]);
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase();
@@ -52,7 +53,7 @@ const TitleChanger = ({ titles }: vars) => {
       clearInterval(intervalID);
     };
   }, [choice]);
-  return <h1>{currString}</h1>;
+  return <h1 className={className}>{currString}</h1>;
 };
 
 export default TitleChanger;
