@@ -4,20 +4,21 @@ export const titles = [
   "Backend",
   "Web3",
   "3D Art",
-  "Neovim",
+  "Neovim User",
 ];
 
 export const aboutMeHeader = `cat ./AboutMe.md`;
 
 export const aboutMe = `# About Me
-Howdy, sugar! I'm Kaylee, a freelance coder, weavin' magic in the digital realm.
+I specialize in Frontend Development, but my expertise spans over lots of different technologies. 
+I have examples of a few previous projects I've been a part of below.
 
 # My Expertise
-- Frontend Development: React.JS, Next.JS, Flutter.
-- Backend Creation: Express.JS, Sequelize, Python.
-- Blockchain Enthusiast: Solidity, Rust.
-- Database Management: MySQL, MariaDB, ClickHouse.
-- Creative Explorations: 3D Art, Sketching, Music, Gaming.`;
+- Frontend: React.JS, Next.JS, Flutter.
+- Backend: Express.JS, Sequelize, Python.
+- Blockchain: Solidity, Rust.
+- Databases: MySQL, MariaDB, ClickHouse.
+- Creativity: 3D Art, Sketching, Music.`;
 
 export const links: Record<string, ILink> = {
   email: {
