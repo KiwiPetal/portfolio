@@ -33,7 +33,9 @@ export default function Home() {
             />
             <div>
               <h1 className={styles.important}>Kaylee Reed</h1>
-              <TitleChanger titles={titles} />
+              <h1 className={styles.smallerTitle}>Fullstack Developer</h1>
+              <div className={styles.line} />
+              <TitleChanger titles={titles} className={styles.detailTitle} />
             </div>
           </div>
         </div>
