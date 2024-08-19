@@ -4,7 +4,6 @@ import Image from "@/node_modules/next/image";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
 import { aboutMe, aboutMeHeader, content, links, titles } from "@/app/utilities/content";
-import ReactLenis from "@studio-freight/react-lenis";
 import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
 import Gallery from "./components/Gallery/Gallery";
@@ -13,7 +12,6 @@ import Gallery from "./components/Gallery/Gallery";
 export default function Home() {
   const selfieWidth = 200;
   return (
-    <ReactLenis root>
       <div className="main">
         <div className={styles.titleWrapper}>
           <div className={styles.background}>
@@ -68,6 +66,5 @@ export default function Home() {
           </footer>
         </div>
       </div>
-    </ReactLenis>
   );
 }
