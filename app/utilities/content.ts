@@ -4,7 +4,7 @@ export const titles = [
   "Backend",
   "Web3",
   "3D Art",
-  "Neovim User",
+  "Neovim Fanatic",
 ];
 
 export const aboutMeHeader = `cat ./AboutMe.md`;
