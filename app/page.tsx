@@ -7,17 +7,19 @@ import { aboutMe, aboutMeHeader, content, links, titles } from "@/app/utilities/
 import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
 import Gallery from "./components/Gallery/Gallery";
+import ReactLenis from "@studio-freight/react-lenis";
 
 // TODO: Scroll to Contacts
 export default function Home() {
   const selfieWidth = 200;
   return (
+    <ReactLenis root>
       <div className="main">
         <div className={styles.titleWrapper}>
           <div className={styles.background}>
-          <ParallaxItem>
-            <div className={styles.bgImage} />
-          </ParallaxItem>
+            <ParallaxItem>
+              <div className={styles.bgImage} />
+            </ParallaxItem>
           </div>
           <div className={styles.title}>
             <Image
@@ -66,5 +68,6 @@ export default function Home() {
           </footer>
         </div>
       </div>
+    </ReactLenis>
   );
 }
