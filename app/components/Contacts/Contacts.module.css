@@ -4,7 +4,8 @@
   width: min(100%, 600px);
 }
 .comment {
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
 }
 .contacts {
   display: flex;

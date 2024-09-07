@@ -24,7 +24,8 @@
   background-color: var(--background);
   border: 1px solid var(--dark-color);
   color: var(--light-color);
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   font-size: 18px;
   position: relative;
   z-index: 100;

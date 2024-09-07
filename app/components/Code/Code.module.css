@@ -3,7 +3,8 @@
 }
 
 .query code {
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   position: relative;
   white-space: nowrap;
 }

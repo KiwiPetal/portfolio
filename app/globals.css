@@ -2,6 +2,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&family=Russo+One&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 @font-face {
   font-family: "MajorMono";
@@ -19,6 +20,8 @@
   --foreground: #f8f5ba;
   --foreground-a: #f8f5ba99;
   --font-title: "MajorMono";
+  --font-weight: 200;
+  --font-size: 18;
 }
 
 .wrapper {
@@ -73,7 +76,8 @@ h1 {
   flex-grow: 1;
   flex-direction: row;
   padding: 15px 25px;
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   font-size: 24px;
   overflow-wrap: break-word;
   text-align: center;
@@ -114,7 +118,8 @@ footer {
   align-items: center;
   width: 100%;
   text-align: center;
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   font-size: 16px;
   padding: 30px;
 }
