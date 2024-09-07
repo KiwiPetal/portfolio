@@ -77,7 +77,8 @@
   font-weight: 700;
 }
 .top > p {
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   height: 100%;
   pointer-events: none;
   font-size: 32px;
@@ -178,7 +179,8 @@
   pointer-events: none;
 }
 .card p {
-  font-family: "Fira Code";
+  font-family: "Victor Mono";
+  font-weight: var(--font-weight);
   font-size: 20px;
   word-break: break-word;
   pointer-events: none;
