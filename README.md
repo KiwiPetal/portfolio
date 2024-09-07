@@ -4,7 +4,7 @@ I'm still working on a couple of things, but overall it is completed.
 
 It's written on [Next.js by Vercel](https://nextjs.org/) using Typescript.
 
-I use [Majör Mono by Emre Parlak](https://www.emreparlak.com/major/) and [FiraCode by tonsky](https://github.com/tonsky/FiraCode). Please check them out. I'm absolutely in love with both.
+I use [Majör Mono by Emre Parlak](https://www.emreparlak.com/major/) and [Victor Mono by rubjo](https://rubjo.github.io/victor-mono/). Please check them out. I'm absolutely in love with both and I personally use Victor Mono as my main font for the terminal.
 
 ## Setup
 
@@ -53,5 +53,5 @@ Global css rules. Colours/Fonts
 - [x] contacts
 - [x] Additional bars for finished products
 - [x] Rework bars for finished products
-- [ ] Optimize images
+- [ ] Reworked animations and accessibility
 - [ ] API integration
