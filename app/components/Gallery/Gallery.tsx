@@ -1,10 +1,10 @@
 'use client'
-import {IContent} from "@/app/utilities/content"
+import { IContent } from "@/app/utilities/content"
 import Image from "@/node_modules/next/image";
 import { motion, useInView } from "framer-motion";
 import styles from "./Gallery.module.css"
 import LaunchIcon from '@mui/icons-material/Launch';
-import React, {createRef, useEffect, useRef, useState} from "react"
+import React, { createRef, useEffect, useRef, useState } from "react"
 
 interface vars {
   name: string,
@@ -36,7 +36,7 @@ export default function Gallery({ name, content }: vars) {
       transition: {
         delay: 0.7,
         duration: 1,
-        ease: [0.65,0.05,0.36,1],
+        ease: [0.65, 0.05, 0.36, 1],
       },
     }
   }
@@ -50,7 +50,7 @@ export default function Gallery({ name, content }: vars) {
       x: "0px",
       transition: {
         duration: 1,
-        ease: [0.65,0.05,0.36,1],
+        ease: [0.65, 0.05, 0.36, 1],
       },
     }
   }
@@ -63,7 +63,7 @@ export default function Gallery({ name, content }: vars) {
       opacity: 1,
       transition: {
         duration: 1.7,
-        ease: [0.65,0.05,0.36,1],
+        ease: [0.65, 0.05, 0.36, 1],
       },
     }
   }
@@ -78,13 +78,13 @@ export default function Gallery({ name, content }: vars) {
       width: "100%",
       opacity: 1,
       transition: {
-        height: { duration: 1.5, ease: [0.17,0.84,0.5,1] },
-        width: { duration: 1, ease: [0.17,0.84,0.5,1] },
+        height: { duration: 1.5, ease: [0.17, 0.84, 0.5, 1] },
+        width: { duration: 1, ease: [0.17, 0.84, 0.5, 1] },
         opacity: { duration: 1.5, delay: 0.2 }
       },
     }
   }
-  
+
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     setDragging(true);
     setStartX(event.clientX);
@@ -136,14 +136,14 @@ export default function Gallery({ name, content }: vars) {
 
   return (
     <motion.div variants={containerVariants} animate={isInView ? "visible" : "hidden"} className={styles.wrapper}>
-      <motion.div 
-        variants={navVariants} 
-        animate={open ? "visible" : "hidden"} 
+      <motion.div
+        variants={navVariants}
+        animate={open ? "visible" : "hidden"}
         className={styles.nav}
-        >
-        <div 
+      >
+        <div
           onClick={() => setCurrent(current - 1 < 0 ? length - 1 : current - 1)}>{"<"}</div>
-        <div 
+        <div
           onClick={() => setCurrent(current + 1 >= length ? 0 : current + 1)}>{">"}</div>
       </motion.div>
       <div className={styles.bar}
@@ -154,11 +154,11 @@ export default function Gallery({ name, content }: vars) {
           </p>
           <div className={`${styles.tick} ${open ? "" : styles.active}`} />
         </div>
-        <motion.div 
-          variants={childVariants} 
-          animate={open ? "visible" : "hidden"} 
+        <motion.div
+          variants={childVariants}
+          animate={open ? "visible" : "hidden"}
           className={`${styles.child}`}
-          >
+        >
           <div
             className={styles.drag}
             ref={containerRef}
@@ -184,6 +184,17 @@ export default function Gallery({ name, content }: vars) {
                     <p>
                       {card.description}
                     </p>
+                    {
+                      card.tags && (
+                        <div className={`${styles.tags}`}>
+                          {card.tags.map((tag, tag_i) => (
+                            <p key={"tag" + i + tag_i} className={`${styles.tag}`}>
+                              #{tag}
+                            </p>
+                          ))}
+                        </div>
+                      )
+                    }
                     <div>
                       <img alt={card.name ? card.name : ""} src={card.src} />
                       <div onClick={() => window.open(card.src)}><LaunchIcon /></div>
@@ -195,7 +206,7 @@ export default function Gallery({ name, content }: vars) {
           </div>
         </motion.div>
       </div>
-      <motion.div 
+      <motion.div
         variants={pipVariants}
         animate={open ? "visible" : "hidden"}
         className={styles.pipsWrapper}>
@@ -208,10 +219,10 @@ export default function Gallery({ name, content }: vars) {
                 className={`${styles.pip}`} />
             )
           })}
-          <div 
+          <div
             className={`${styles.pip} ${styles.activePip}`}
             style={{ '--length': length, '--current': current } as React.CSSProperties}
-            />
+          />
         </div>
       </motion.div>
     </motion.div>
