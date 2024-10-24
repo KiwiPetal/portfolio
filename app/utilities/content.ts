@@ -67,6 +67,10 @@ export const content: Record<ContentTypes, IContent[]> = {
     },
     {
       name: "Adobe Illustrator",
+      src: "/pics/lich-king.png"
+    },
+    {
+      name: "Adobe Illustrator",
       src: "/pics/mask2.png"
     },
   ],
