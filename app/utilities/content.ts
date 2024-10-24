@@ -17,7 +17,7 @@ I have examples of a few previous projects I've been a part of below.
 - Frontend: React.JS, Next.JS, Flutter.
 - Backend: Express.JS, Sequelize, Python.
 - Blockchain: Solidity, Rust.
-- Databases: MySQL, MariaDB, ClickHouse.
+- Databases: MySQL, ClickHouse.
 - Creativity: 3D Art, Sketching, Music.`;
 
 export const links: Record<string, ILink> = {
@@ -73,26 +73,31 @@ export const content: Record<ContentTypes, IContent[]> = {
   project: [
     {
       name: "Prime Delivery",
+      tags: ["ReactJS", "Python"],
       description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot. Connected with an admin panel.",
       src: "/pics/PrimeDelivery.png"
     },
     {
-      name: "Prime Delivery",
-      description: "Admin panel that shows business statistics and information from the shift manager.",
-      src: "/pics/PrimeDelivery-dashboard.png"
+      name: "SMT50",
+      tags: ["NextJS", "Rust", "ExpressJS", "Sequelize"],
+      description: "Crypto project deployed on Solana, where I've built and redesigned the dashboard, created the secure API with a connection to the database and a custom Solana program (smart contract).",
+      src: "/pics/smt50dashboard.png"
     },
     {
       name: "Astrodiggers",
+      tags: ["ReactJS", "Solidity", "ExpressJS"],
       description: "A crypto project for which I've built 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
       src: "/pics/Astrodiggers.png"
     },
     {
       name: "Astrodiggers",
-      description: "Client dashboard of the project",
+      tags: ["ReactJS", "Solidity", "ExpressJS"],
+      description: "Client dashboard of the Astrodiggers project.",
       src: "/pics/Astrodiggers-dashboard.png"
     },
     {
       name: "Soldatiki",
+      tags: ["Flutter", "Solidity", "ExpressJS"],
       description: "Another crypto project where I've built Frontend, Backend and smart contracts",
       src: "/pics/Soldatiki2.png"
     },
@@ -110,5 +115,6 @@ export type ContentTypes =
 export interface IContent {
   name?: string;
   description?: string;
+  tags?: string[];
   src: string;
 }
