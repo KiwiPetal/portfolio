@@ -70,13 +70,16 @@ export default function Gallery({ name, content }: vars) {
   const childVariants = {
     hidden: {
       height: "0px",
+      width: "600px",
       opacity: 0,
     },
     visible: {
       height: containerHeight,
+      width: "100%",
       opacity: 1,
       transition: {
         height: { duration: 1.5, ease: [0.17,0.84,0.5,1] },
+        width: { duration: 1, ease: [0.17,0.84,0.5,1] },
         opacity: { duration: 1.5, delay: 0.2 }
       },
     }
