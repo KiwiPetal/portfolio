@@ -89,7 +89,7 @@
 .title > img {
   border-radius: 20px;
   justify-self: flex-end;
-  cursor: pointer;
+  /* cursor: pointer; */
   /* border: 2px solid var(--secondary-color); */
   transition: 0.3s ease-in-out;
   box-shadow: none;

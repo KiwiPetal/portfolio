@@ -24,9 +24,6 @@ export default function Home() {
           <div className={styles.title}>
             <Image
               alt="A cute picture of the developer"
-              onClick={() =>
-                window.open("https://www.instagram.com/kiwi.petals/")
-              }
               width={selfieWidth}
               height={(686 / 386) * selfieWidth}
               src="/pic1.webp"
