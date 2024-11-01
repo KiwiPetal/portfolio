@@ -77,27 +77,27 @@ export const content: Record<ContentTypes, IContent[]> = {
   project: [
     {
       name: "Prime Delivery",
-      tags: ["ReactJS", "Python"],
-      description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot. Connected with an admin panel.",
-      pics: ["/pics/PrimeDelivery.png"]
+      tags: ["ReactJS", "python-telegram-bot", "MariaDB"],
+      description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot, which is connected to an admin webpanel.",
+      pics: ["/pics/PrimeDelivery.png", "/pics/PrimeDelivery-dashboard.png"]
     },
     {
       name: "SMT50",
-      tags: ["NextJS", "Rust", "ExpressJS", "Sequelize"],
-      description: "Crypto project deployed on Solana, where I've built and redesigned the dashboard, created the secure API with a connection to the database and a custom Solana program (smart contract).",
+      tags: ["NextJS", "Anchor", "ExpressJS", "Sequelize", "MariaDB"],
+      description: "Crypto project deployed on Solana, where I've built and redesigned the dashboard, created the secure API with a connection to the database and a custom Solana program (smart contract) that created unique PDA's for users.",
       pics: ["/pics/smt50dashboard.png"]
     },
     {
       name: "Astrodiggers",
-      tags: ["ReactJS", "Solidity", "ExpressJS"],
-      description: "A crypto project for which I've built 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
+      tags: ["ReactJS", "Solidity", "ExpressJS", "ClickHouse"],
+      description: "Crypto project for which I've built 2 websites (Landing page and a dashboard), web3 upgradable smart contracts on Ethereum blockchain, and backend with database connection for the Tournaments in the project.",
       pics: ["/pics/Astrodiggers.png", "/pics/Astrodiggers-dashboard.png"]
     },
     {
       name: "Soldatiki",
-      tags: ["Flutter", "Solidity", "ExpressJS"],
-      description: "Another crypto project where I've built Frontend, Backend and smart contracts",
-      pics: ["/pics/Soldatiki2.png"]
+      tags: ["Flutter", "Solidity", "ExpressJS", "MariaDB"],
+      description: "Crypto project where I've built both the landing page and the dashboard. Backend with a database and smart contracts for the on-chain algorithms.",
+      pics: ["/pics/Soldatiki2.png", "/pics/Soldatiki.png"]
     },
   ]
 }
