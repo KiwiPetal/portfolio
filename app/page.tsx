@@ -8,6 +8,7 @@ import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
 import Gallery from "./components/Gallery/Gallery";
 import ReactLenis from "@studio-freight/react-lenis";
+import LinkedImage from "./components/LinkedImage/LinkedImage";
 
 // TODO: Scroll to Contacts
 export default function Home() {
@@ -22,12 +23,7 @@ export default function Home() {
             </ParallaxItem>
           </div>
           <div className={styles.title}>
-            <Image
-              alt="A cute picture of the developer"
-              width={selfieWidth}
-              height={(686 / 386) * selfieWidth}
-              src="/pic1.webp"
-            />
+            <LinkedImage />
             <div>
               <h1 className={styles.important}>Kaylee Reed</h1>
               <h1 className={styles.smallerTitle}>Fullstack Developer</h1>

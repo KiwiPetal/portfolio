@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+}
+
+.wrapper img {
+  border-radius: 20px;
+  justify-self: flex-end;
+  /* cursor: pointer; */
+  /* border: 2px solid var(--secondary-color); */
+  transition: 0.3s ease-in-out;
+  box-shadow: none;
+  animation: float ease-in-out 4s infinite;
+}
+
+@keyframes float {
+  50% {
+    translate: 0 8px;
+  }
+
+  0%,
+  100% {
+    translate: 0 0px;
+  }
+}
+
+
+.wrapper>img:hover {
+  rotate: 10deg;
+  scale: 1.15;
+  box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
+}
