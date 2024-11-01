@@ -38,7 +38,6 @@ export default function Home() {
           </div>
           <div className={styles.section}>
             <Gallery name="Projects" content={content.project} />
-            <Gallery name="Art" content={content.art} />
           </div>
           <div id="contacts" className={styles.section}>
             <Contacts links={links} />
