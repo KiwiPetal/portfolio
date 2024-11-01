@@ -23,7 +23,7 @@
   /* overflow: hidden; */
   display: flex;
   border-radius: 10px;
-  transition: box-shadow 0.8s ease-in-out;
+  transition: box-shadow 0.8s ease-in-out, z-index 0.3s 0s;
 }
 .card.open {
   position: fixed;
@@ -34,7 +34,7 @@
   translate: -50% -50%;
   background-color: var(--backgroundAccent);
   transition: box-shadow 0.7s 0.1s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.8) 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 1) 10px 10px 15px;
   /* height: max-content; */
   /* transform: translate(-50%, -50%); */
   /* width: min(95%, 800px); */
@@ -117,3 +117,25 @@
   margin: 0 !important;
   padding: 2px 10px;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.6s ease-out;
+  z-index: 9;
+}
+
+.overlay.hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+

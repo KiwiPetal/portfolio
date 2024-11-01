@@ -43,8 +43,10 @@ const infoVariants = {
 
 export function Card(props: props) {
   const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0)
   return (
     <div className={styles.card_wrapper}>
+      <Overlay open={open} setClose={() => setOpen(false)} />
       <motion.div
         layoutId={"card" + props.id}
         key={"card" + props.id}
@@ -52,11 +54,11 @@ export function Card(props: props) {
           duration: 0.5,
           layout: open ? openSpring : closeSpring
         }}
-        
+
         className={
           `${styles.card} ${open ? styles.open : ""}`
         }>
-        <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[0]} />
+        <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
         <motion.div variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
           <p className={styles.title}>
             {props.title}
@@ -81,11 +83,11 @@ export function Card(props: props) {
 }
 
 interface overlayVars {
-  setOpen: () => {}
+  setClose: () => void;
+  open: boolean;
 }
-function Overlay({ setOpen }: overlayVars) {
+function Overlay({ setClose, open }: overlayVars) {
   return (
-    <div>
-    </div>
+    <div className={`${styles.overlay} ${open ? "" : styles.hidden}`} onClick={setClose} />
   )
 }
