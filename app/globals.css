@@ -16,12 +16,13 @@
   --dark-color-a: #d5626699;
   --light-color: #ffacaf;
   --background: #0b0a0a;
-  --backgroundAccent: #333333;
+  --backgroundAccent: #161616;
   --foreground: #f8f5ba;
   --foreground-a: #f8f5ba99;
   --font-title: "MajorMono";
   --font-weight: 200;
   --font-size: 18;
+  --font-code: "Victor Mono"
 }
 
 .wrapper {
@@ -33,6 +34,9 @@
   overflow-x: hidden;
   /* background-size: 40px 40px; */
   /* background-image: radial-gradient(rgb(253 145 149 / 10%) 10%, transparent 10%); */
+}
+html {
+  font-family: var(--font-code);
 }
 
 a {
