@@ -1,213 +1,35 @@
 .wrapper {
-  position: relative;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-  max-width: min(90%, 1000px);
-  margin: 0 50px;
-}
-.nav > div {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-  position: absolute;
-  border: 1px solid var(--dark-color-a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60%;
-  width: 25px;
-  top: 50%;
-  z-index: 1;
-  font-weight: 700;
-  transform: translate(0%, -50%);
-}
-.nav > div::after {
-  border-radius: 10px;
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  background-color: var(--dark-color);
-  transition: 0.3s ease-out, background-color 0.1s ease-in-out;
-  box-shadow: transparent;
-}
-.nav > div:first-child::after {
-  border-radius: 20px 0px 0px 20px;
-}
-.nav > div:last-child::after {
-  border-radius: 0px 20px 20px 0px;
-}
-.nav > div:hover::after {
-  opacity: 1;
-  box-shadow: var(--dark-color) 0px 10px 100px;
-}
-.nav > div:first-child {
-  left: -35px;
-  border-radius: 20px 0px 0px 20px;
-  font-size: 32px;
-}
-.nav > div:last-child {
-  font-size: 32px;
-  border-radius: 0px 20px 20px 0px;
-  right: -35px;
-}
-.bar {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--dark-color-a);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.top {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 32px;
-  font-weight: 700;
-}
-.top > p {
-  font-family: "Victor Mono";
-  font-weight: var(--font-weight);
-  height: 100%;
-  pointer-events: none;
-  font-size: 32px;
-  word-break: break-word;
-  width: 90%;
-  padding: 5px 0px;
-  margin: 0px;
-  font-weight: 600;
-}
-.tick {
-  height: 14px;
-  width: 14px;
-  right: 10px;
-  border-radius: 2px;
-  background-color: var(--dark-color);
-  box-shadow: var(--main-color) 0px 0px 20px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  position: absolute;
-  aspect-ratio: 1/1;
-}
-.tick::after {
-  content: "";
-  height: 12px;
-  border-radius: 2px;
-  background-color: var(--background);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s;
-
-  position: absolute;
-  aspect-ratio: 1/1;
-}
-.active::after {
-  height: 0px;
-}
-
-.child {
-  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
-}
-.drag {
-  display: flex;
-  flex-direction: row;
-}
-.card {
-  border-top: 1px solid var(--dark-color-a);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  flex-shrink: 0;
-  height: fit-content;
-  transition: inherit;
-}
-.card > div {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  /* gap: 5px; */
-  margin-bottom: 15px;
-  align-items: center;
-  justify-content: flex-start;
-}
-.card > div > div {
-  position: relative;
-}
-
-.card img + div {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--dark-color-a);
-  backdrop-filter: blur(20px);
-  position: absolute;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  height: 25px;
-  width: 25px;
-  top: 10px;
-  right: 10px;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-.card img {
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-
-  max-height: 800px;
-  object-fit: cover !important;
-  border-radius: 10px;
-  pointer-events: none;
-}
-.card p {
-  font-family: "Victor Mono";
-  font-weight: var(--font-weight);
-  font-size: 20px;
-  word-break: break-word;
-  pointer-events: none;
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-.card > div > p {
-  width: 100%;
-}
-
-.tags {
-  display: flex;
-  gap: 10px !important;
   flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 20px !important;
+  justify-content: center;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+  /* justify-items: center; */
+
+  gap: 10px;
+  width: min(95%, 1400px);
+  /* animation: scale 10s linear infinite; */
 }
-.tag {
-  border-radius: 10px;
-  border: var(--dark-color-a) 1px solid;
-  color: var(--dark-color-a);
-  width: fit-content;
-  margin: 0 !important;
-  padding: 2px 10px;
+
+@keyframes scale {
+  0%,100% {
+    width: 100%;
+  }
+  50% {
+    width: 50px;
+  }
 }
+
+
+
+
+
+
+
+
+
+
 
 .pipsWrapper {
   display: flex;
@@ -215,6 +37,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .pips {
   display: flex;
   position: relative;
@@ -223,6 +46,7 @@
   align-items: center;
   gap: 5px;
 }
+
 .pip {
   background-color: transparent;
   height: 10px;
@@ -232,6 +56,7 @@
   /* border-radius: 50%; */
   cursor: pointer;
 }
+
 .activePip {
   --length: 1;
   --current: 0;
@@ -239,10 +64,6 @@
   pointer-events: none;
   background-color: var(--main-color);
   left: calc((100% + 5px) / var(--length) * var(--current));
-  transition: all cubic-bezier(0.17,0.84,0.5,1) 0.8s;
+  transition: all cubic-bezier(0.17, 0.84, 0.5, 1) 0.8s;
   box-shadow: var(--main-color) 0px 0px 15px;
-}
-
-.closed {
-  max-height: 0;
 }
