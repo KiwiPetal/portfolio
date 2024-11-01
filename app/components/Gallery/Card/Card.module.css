@@ -1,6 +1,7 @@
 .card_wrapper {
   /* list-style: none; */
-  width: min(400px, 95%);
+  width: 100%;
+  min-height: 260px;
 }
 
 .card img {
@@ -13,9 +14,10 @@
   position: relative;
   /* aspect-ratio: 2/1; */
   height: 260px;
-  width: min(400px, 95%);
+  /* width: min(400px, 95%); */
   display: flex;
   flex-direction: column;
+  background-color: var(--backgroundAccent);
 
   /* outline: 2px solid green; */
   /* min-width: 200px; */
@@ -23,7 +25,7 @@
   /* overflow: hidden; */
   display: flex;
   border-radius: 10px;
-  transition: box-shadow 0.8s ease-in-out, z-index 0.3s 0s;
+  transition: box-shadow 0.8s ease-in-out, z-index 0.5s 0s;
 }
 .card.open {
   position: fixed;
@@ -32,7 +34,6 @@
   width: min(800px, 95%);
   height: auto;
   translate: -50% -50%;
-  background-color: var(--backgroundAccent);
   transition: box-shadow 0.7s 0.1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 1) 10px 10px 15px;
   /* height: max-content; */
@@ -95,7 +96,6 @@
   translate: -50% calc(-50% + 20px);
   transition: ease-in-out 0.3s;
   z-index: 2;
-  background-color: var(--background);
   padding: 5px;
   border-radius: 10px;
 }
@@ -135,7 +135,7 @@
 .overlay.hidden {
   pointer-events: none;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-out;
 }
 
 

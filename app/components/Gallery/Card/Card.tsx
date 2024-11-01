@@ -10,8 +10,6 @@ interface props {
   pics: string[];
   tags?: string[];
   link?: string;
-  open: boolean;
-  setOpen: () => {};
 }
 
 const openSpring = { type: "spring", stiffness: 200, damping: 30 };
