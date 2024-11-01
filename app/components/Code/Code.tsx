@@ -7,7 +7,7 @@ interface vars {
   terminal?: boolean;
   titleRef: MutableRefObject<null>;
   text: string;
-  style?: "s" | "m";
+  style?: "s" | "m" | "l";
 }
 export default function Code({enabled, isInView, titleRef, text, terminal, style = "m"}: vars) {
   const containerVariants = {
