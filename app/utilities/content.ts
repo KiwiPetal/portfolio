@@ -51,27 +51,27 @@ export const content: Record<ContentTypes, IContent[]> = {
   art: [
     {
       name: "Blender",
-      src: "/pics/ring.png"
+      pics: ["/pics/ring.png"]
     },
     {
       name: "Blender",
-      src: "/pics/anvil.png"
+      pics: ["/pics/anvil.png"]
     },
     {
       name: "Blender",
-      src: "/pics/donut.png"
+      pics: ["/pics/donut.png"]
     },
     {
       name: "Adobe Illustrator",
-      src: "/pics/mask.png"
+      pics: ["/pics/mask.png"]
     },
     {
       name: "Adobe Illustrator",
-      src: "/pics/lich-king.png"
+      pics: ["/pics/lich-king.png"]
     },
     {
       name: "Adobe Illustrator",
-      src: "/pics/mask2.png"
+      pics: ["/pics/mask2.png"]
     },
   ],
   project: [
@@ -79,31 +79,25 @@ export const content: Record<ContentTypes, IContent[]> = {
       name: "Prime Delivery",
       tags: ["ReactJS", "Python"],
       description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot. Connected with an admin panel.",
-      src: "/pics/PrimeDelivery.png"
+      pics: ["/pics/PrimeDelivery.png"]
     },
     {
       name: "SMT50",
       tags: ["NextJS", "Rust", "ExpressJS", "Sequelize"],
       description: "Crypto project deployed on Solana, where I've built and redesigned the dashboard, created the secure API with a connection to the database and a custom Solana program (smart contract).",
-      src: "/pics/smt50dashboard.png"
+      pics: ["/pics/smt50dashboard.png"]
     },
     {
       name: "Astrodiggers",
       tags: ["ReactJS", "Solidity", "ExpressJS"],
       description: "A crypto project for which I've built 2 websites (Landing page and a dashboard), web3 contracts, and backend for the Tournaments in the project.",
-      src: "/pics/Astrodiggers.png"
-    },
-    {
-      name: "Astrodiggers",
-      tags: ["ReactJS", "Solidity", "ExpressJS"],
-      description: "Client dashboard of the Astrodiggers project.",
-      src: "/pics/Astrodiggers-dashboard.png"
+      pics: ["/pics/Astrodiggers.png", "/pics/Astrodiggers-dashboard.png"]
     },
     {
       name: "Soldatiki",
       tags: ["Flutter", "Solidity", "ExpressJS"],
       description: "Another crypto project where I've built Frontend, Backend and smart contracts",
-      src: "/pics/Soldatiki2.png"
+      pics: ["/pics/Soldatiki2.png"]
     },
   ]
 }
@@ -117,8 +111,8 @@ export type ContentTypes =
   "project" | "art";
 
 export interface IContent {
-  name?: string;
+  name: string;
   description?: string;
   tags?: string[];
-  src: string;
+  pics: string[];
 }
