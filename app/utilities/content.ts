@@ -77,13 +77,13 @@ export const content: Record<ContentTypes, IContent[]> = {
   project: [
     {
       name: "Prime Delivery",
-      tags: ["ReactJS", "python-telegram-bot", "MariaDB"],
+      tags: ["ReactJS", "Tailwindcss", "python-telegram-bot", "MariaDB"],
       description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot, which is connected to an admin webpanel.",
       pics: ["/pics/PrimeDelivery.png", "/pics/PrimeDelivery-dashboard.png"]
     },
     {
       name: "SMT50",
-      tags: ["NextJS", "Anchor", "ExpressJS", "Sequelize", "MariaDB"],
+      tags: ["NextJS", "Tailwindcss", "Anchor", "ExpressJS", "MariaDB"],
       description: "Crypto project deployed on Solana, where I've built and redesigned the dashboard, created the secure API with a connection to the database and a custom Solana program (smart contract) that created unique PDA's for users.",
       pics: ["/pics/smt50dashboard.png"]
     },
@@ -95,9 +95,15 @@ export const content: Record<ContentTypes, IContent[]> = {
     },
     {
       name: "Soldatiki",
-      tags: ["Flutter", "Solidity", "ExpressJS", "MariaDB"],
+      tags: ["ReactJS", "Solidity", "ExpressJS", "MariaDB"],
       description: "Crypto project where I've built both the landing page and the dashboard. Backend with a database and smart contracts for the on-chain algorithms.",
       pics: ["/pics/Soldatiki2.png", "/pics/Soldatiki.png"]
+    },
+    {
+      name: "Crypto Nodes",
+      tags: ["Flutter", "Solidity" ],
+      description: "Crypto project where I've built both the landing page and the dashboard, which were connected to the Smart Contract, that was being used as a database solution.",
+      pics: ["/pics/CryptoNodes-landing.png", "/pics/CryptoNodes-dashboard.png"]
     },
   ]
 }
