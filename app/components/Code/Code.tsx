@@ -1,6 +1,6 @@
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import styles from "./Code.module.css"
-import {MutableRefObject} from "react";
+import { MutableRefObject } from "react";
 interface vars {
   enabled: boolean;
   isInView: boolean;
@@ -9,7 +9,7 @@ interface vars {
   text: string;
   style?: "s" | "m" | "l";
 }
-export default function Code({enabled, isInView, titleRef, text, terminal, style = "m"}: vars) {
+export default function Code({ enabled, isInView, titleRef, text, terminal, style = "m" }: vars) {
   const containerVariants = {
     hidden: {
     },
@@ -50,7 +50,8 @@ export default function Code({enabled, isInView, titleRef, text, terminal, style
         variants={containerVariants}
         initial="hidden"
         animate={enabled ? isInView ? "shown" : "hidden" : "hidden"}
-        ref={titleRef}>{terminal ? "$ " : ""}{characters.map((character, index) => (
+        ref={titleRef}>
+        {terminal ? "$ " : ""}{characters.map((character, index) => (
           <motion.span variants={childVariants}
 
             key={index}>
