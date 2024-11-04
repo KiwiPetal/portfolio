@@ -27,19 +27,6 @@ const pipVariants = {
     },
   }
 }
-const navVariants = {
-  hidden: {
-    opacity: 0,
-    display: "none"
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.7,
-      ease: [0.65, 0.05, 0.36, 1],
-    },
-  }
-}
 const infoVariants = {
   open: {
     height: "auto",

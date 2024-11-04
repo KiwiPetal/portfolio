@@ -7,8 +7,6 @@ export const titles = [
   "Neovim Fanatic",
 ];
 
-export const aboutMeHeader = `cat ./AboutMe.md`;
-
 export const aboutMe = 
 `
 I specialize in Frontend Development, but my expertise spans over lots of different technologies.
@@ -69,32 +67,6 @@ export const links: Record<string, ILink> = {
 }
 
 export const content: Record<ContentTypes, IContent[]> = {
-  art: [
-    {
-      name: "Blender",
-      pics: ["/pics/ring.png"]
-    },
-    {
-      name: "Blender",
-      pics: ["/pics/anvil.png"]
-    },
-    {
-      name: "Blender",
-      pics: ["/pics/donut.png"]
-    },
-    {
-      name: "Adobe Illustrator",
-      pics: ["/pics/mask.png"]
-    },
-    {
-      name: "Adobe Illustrator",
-      pics: ["/pics/lich-king.png"]
-    },
-    {
-      name: "Adobe Illustrator",
-      pics: ["/pics/mask2.png"]
-    },
-  ],
   project: [
     {
       name: "Prime Delivery",
@@ -135,7 +107,7 @@ export interface ILink {
 }
 
 export type ContentTypes = 
-  "project" | "art";
+  "project";
 
 export interface IContent {
   name: string;

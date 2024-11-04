@@ -1,6 +1,5 @@
 "use client";
 import styles from "./page.module.css";
-import Image from "@/node_modules/next/image";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
 import { aboutMe, aboutMeHeader, content, links, titles } from "@/app/utilities/content";
@@ -10,9 +9,7 @@ import Gallery from "./components/Gallery/Gallery";
 import ReactLenis from "@studio-freight/react-lenis";
 import LinkedImage from "./components/LinkedImage/LinkedImage";
 
-// TODO: Scroll to Contacts
 export default function Home() {
-  const selfieWidth = 200;
   return (
     <ReactLenis root>
       <div className="main">
@@ -42,7 +39,6 @@ export default function Home() {
           <div id="contacts" className={styles.section}>
             <Contacts links={links} />
           </div>
-          {/* <div className={`${styles.section} ${styles.contacts}`}></div> */}
           <footer>
             <p>
               This website is written with{" "}

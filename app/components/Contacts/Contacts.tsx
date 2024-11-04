@@ -12,20 +12,6 @@ const Contacts = ({ links }: vars) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -33% 0px", once: true });
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      x: "-20%",
-    },
-    shown: {
-      opacity: 1,
-      x: "0px",
-      transition: {
-        duration: 1,
-        ease: [0.65,0.05,0.36,1],
-      },
-    }
-  }
   const staggerDelay = 0.15;
   const contactVariants = Object.keys(links).map((_, i) => (
     {

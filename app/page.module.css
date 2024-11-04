@@ -3,6 +3,7 @@
   width: 100%;
   height: 100vh;
 }
+
 .background {
   position: absolute;
   min-width: 100%;
@@ -12,6 +13,7 @@
   background-position: center;
   z-index: 1;
 }
+
 .bgImage {
   min-width: 100%;
   min-height: 100vh;
@@ -19,6 +21,7 @@
   background-size: cover;
   background-position: center;
 }
+
 .title {
   z-index: 2;
   position: absolute;
@@ -30,56 +33,51 @@
   gap: 20px;
   background-size: cover;
   background-position: center;
-  /* background-repeat: no-repeat; */
-  /* background-size: 80vh; */
-  /* background-position: center; */
 }
-.title > * {
+
+.title>* {
   min-width: 0;
 }
+
 .title h1 {
-  /* color: var(--light-color); */
   margin: 0;
   color: transparent;
-  /* text-shadow: var(--background) 0 0 15px; */
   display: inline-block;
   height: 60px;
   width: 100%;
   inline-size: 100%;
-  /* overflow-wrap: break-word; */
 }
+
 .title h1.important {
   height: auto !important;
 }
+
 .line {
   height: 1px;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    var(--main-color) 0%,
-    var(--foreground) 100%
-  );
+  background: linear-gradient(to right,
+      var(--main-color) 0%,
+      var(--foreground) 100%);
   opacity: 0.5;
 }
+
 .title .smallerTitle {
   font-size: 32px;
   height: auto;
 }
+
 .title .detailTitle {
   font-size: 24px;
 }
-.title > div {
+
+.title>div {
   display: flex;
   max-width: 90%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    var(--main-color) 0%,
-    var(--foreground) 100%
-  );
+  background: linear-gradient(to right,
+      var(--main-color) 0%,
+      var(--foreground) 100%);
   background-clip: text;
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -113,6 +111,7 @@
   background: #000000;
   filter: url(#grainy);
 }
+
 .nav {
   position: absolute;
   top: 0;
@@ -120,9 +119,11 @@
   width: 30px;
   background-color: blue;
 }
+
 .left {
   left: 0;
 }
+
 .right {
   right: 0;
 }
@@ -144,12 +145,15 @@
     flex-direction: column;
     margin-top: 30px;
   }
+
   .title h1 {
     text-align: center;
   }
-  .title > div {
+
+  .title>div {
     justify-content: flex-start;
   }
+
   .title h1 {
     font-size: 2rem;
   }

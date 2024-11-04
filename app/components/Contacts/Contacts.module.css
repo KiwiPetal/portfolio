@@ -6,9 +6,11 @@
   align-items: center;
   width: min(100%, 600px);
 }
+
 .comment {
   font-weight: var(--font-weight);
 }
+
 .contacts {
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +21,7 @@
   grid-column-start: 1;
   grid-column-end: span 2;
 }
+
 .widest {
   grid-column-start: 1;
   grid-column-end: span 3;

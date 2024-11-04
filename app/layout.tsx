@@ -8,12 +8,6 @@ export const metadata: Metadata = {
   title: "Kaylee's portfolio",
   description: "A freelance coder, weavin' magic in the digital realm.",
   themeColor: "#0b0a0a"
-  // openGraph: {
-  //   type: "website",
-  //   images: [{
-  //     url: "https://little-kiwi.net/icon.png"
-  //   }]
-  // }
 }
 
 export const victor_mono = Victor_Mono({

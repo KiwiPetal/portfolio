@@ -6,16 +6,7 @@ import Code from "../Code/Code";
 import { aboutMe, techStack } from "@/app/utilities/content";
 import Image from "next/image";
 
-interface vars {
-  enabled: boolean;
-  header: string;
-  description: string;
-}
-
-//TODO: Loading for ~3 seconds
-//Adjust margin for isInView
-const AboutMe = ({ enabled, header, description }: vars) => {
-  // const [open, setOpen] = useState(false);
+const AboutMe = () => {
   const titleRef = useRef(null);
   const possibleGroups = Object.keys(techStack);
   const [currentGroup, setCurrentGroup] = useState(possibleGroups[0]);

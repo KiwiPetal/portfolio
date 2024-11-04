@@ -6,6 +6,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .descriptionWrapper {
   width: 95%;
 }
@@ -18,22 +19,21 @@
 }
 
 .selector .active {
-    background: linear-gradient(
-    to right,
-    var(--main-color) 0%,
-    var(--foreground) 100%
-  );
+  background: linear-gradient(to right,
+      var(--main-color) 0%,
+      var(--foreground) 100%);
   background-clip: text;
   color: transparent;
   opacity: 1;
 }
+
 .selector p {
   margin: 0;
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
 
-.selector > div {
+.selector>div {
   width: fit-content;
   position: relative;
   cursor: pointer;
@@ -48,10 +48,11 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-    background: linear-gradient(to right,
-          var(--main-color) 0%,
-          var(--foreground) 100%);
+  background: linear-gradient(to right,
+      var(--main-color) 0%,
+      var(--foreground) 100%);
 }
+
 .cardWrapper {
   display: grid;
   width: 100%;
