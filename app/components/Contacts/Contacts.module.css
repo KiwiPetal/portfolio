@@ -1,10 +1,12 @@
 .wrapper {
   margin: 30px;
   max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: min(100%, 600px);
 }
 .comment {
-  font-family: "Victor Mono";
   font-weight: var(--font-weight);
 }
 .contacts {

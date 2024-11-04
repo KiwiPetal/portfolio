@@ -26,16 +26,16 @@ const Contacts = ({ links }: vars) => {
       },
     }
   }
-  const staggerDelay = 0.2
+  const staggerDelay = 0.15;
   const contactVariants = Object.keys(links).map((_, i) => (
     {
       hidden: {
         opacity: 0,
-        x: "-20%",
+        y: "50px",
       },
       shown: {
         opacity: 1,
-        x: "0px",
+        y: "0px",
         transition: {
           delay: i * staggerDelay,
           duration: 1.5,
@@ -47,7 +47,7 @@ const Contacts = ({ links }: vars) => {
 
   return (
     <div ref={ref} className={styles.wrapper}>
-      <Code text="// Where can you find me?" enabled isInView={isInView} titleRef={titleRef} style="s" />
+      <Code text="Where can you find me?" enabled isInView={isInView} titleRef={titleRef} style="m" />
       <div className={styles.contacts}>
         {Object.keys(links).map((link, i) => {
           let _link = links[link];
