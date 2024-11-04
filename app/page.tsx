@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
-import { aboutMe, aboutMeHeader, content, links, titles } from "@/app/utilities/content";
+import { aboutMe, content, links, titles } from "@/app/utilities/content";
 import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
 import Gallery from "./components/Gallery/Gallery";
@@ -31,10 +31,10 @@ export default function Home() {
         </div>
         <div className={styles._wrapper}>
           <div className={styles.section}>
-            <AboutMe header={aboutMeHeader} description={aboutMe} enabled />
+            <AboutMe />
           </div>
           <div className={styles.section}>
-            <Gallery name="Projects" content={content.project} />
+            <Gallery content={content.project} />
           </div>
           <div id="contacts" className={styles.section}>
             <Contacts links={links} />
