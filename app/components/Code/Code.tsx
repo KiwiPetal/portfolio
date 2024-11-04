@@ -22,7 +22,6 @@ export default function Code({ enabled, isInView, titleRef, text, terminal, styl
   }
   const childVariants = {
     hidden: {
-      opacity: 1,
       display: "none",
       transition: {
         type: "spring",
@@ -32,7 +31,6 @@ export default function Code({ enabled, isInView, titleRef, text, terminal, styl
       },
     },
     shown: {
-      opacity: 1,
       display: "inline",
       transition: {
         damping: 12,
