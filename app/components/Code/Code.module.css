@@ -3,8 +3,12 @@
 }
 
 .query code {
-  font-family: "Victor Mono";
   font-weight: var(--font-weight);
+  background: linear-gradient(to right,
+      var(--main-color) 0%,
+      var(--foreground) 100%);
+  background-clip: text;
+  color: transparent;
   position: relative;
   white-space: nowrap;
 }
