@@ -10,7 +10,7 @@ const AboutMe = () => {
   const titleRef = useRef(null);
   const possibleGroups = Object.keys(techStack);
   const [currentGroup, setCurrentGroup] = useState(possibleGroups[0]);
-  const staggerDelay = 0.05;
+  const staggerDelay = 0.025;
   const containerStaggerDelay = 0.4;
   const isInView = useInView(titleRef, { margin: "0px 0px -50% 0px", once: true });
   const variants = (i: number) => {
@@ -64,7 +64,7 @@ const AboutMe = () => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
-                  transition={{ delay: i * staggerDelay }}
+                  transition={{ delay: i * staggerDelay, duration: 0.2 }}
                   className={styles.card}>
                   { /* @ts-ignore */}
                   <Image width={28} height={28} alt={`${tech} logo`} src={techStack[currentGroup][tech]} />
