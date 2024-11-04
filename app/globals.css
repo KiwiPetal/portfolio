@@ -40,7 +40,8 @@ a {
   top: 5px;
   left: 0;
   background-color: var(--foreground);
-  filter: blur(50px);
+  filter: blur(40px);
+  opacity: 0.8;
   height: 100%;
   width: 100%;
   transition: 0.2s ease-out;
@@ -92,7 +93,7 @@ h1 {
 
 .box:hover::after {
   opacity: 1;
-  box-shadow: var(--dark-color) 0px 10px 100px;
+  box-shadow: var(--dark-color) 0px 10px 70px;
 }
 
 footer {
