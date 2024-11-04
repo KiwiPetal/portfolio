@@ -1,28 +1,21 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Major+Mono+Display&family=Pacifico&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&family=Russo+One&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-@font-face {
-  font-family: "MajorMono";
-  src: url("/MajorMono.ttf");
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap'); */
 
 :root {
   /* Colors */
   --main-color: #fd9195;
   --dark-color: #d56266;
   --dark-color-a: #d5626699;
+  --dark-color-b: #d5626655;
   --light-color: #ffacaf;
   --background: #0b0a0a;
   --backgroundAccent: #161616;
   --foreground: #f8f5ba;
   --foreground-a: #f8f5ba99;
-  --font-title: "MajorMono";
-  --font-weight: 200;
+  --font-weight: 400;
   --font-size: 18;
-  --font-code: "Victor Mono"
 }
 
 .wrapper {
@@ -34,9 +27,6 @@
   overflow-x: hidden;
   /* background-size: 40px 40px; */
   /* background-image: radial-gradient(rgb(253 145 149 / 10%) 10%, transparent 10%); */
-}
-html {
-  font-family: var(--font-code);
 }
 
 a {
@@ -78,10 +68,9 @@ h1 {
 .box {
   flex-grow: 1;
   flex-direction: row;
-  padding: 15px 25px;
-  font-family: "Victor Mono";
+  padding: 12px 20px;
   font-weight: var(--font-weight);
-  font-size: 24px;
+  font-size: 22px;
   overflow-wrap: break-word;
   text-align: center;
   border: 1px solid var(--dark-color-a);
@@ -121,8 +110,10 @@ footer {
   align-items: center;
   width: 100%;
   text-align: center;
-  font-family: "Victor Mono";
   font-weight: var(--font-weight);
-  font-size: 16px;
-  padding: 30px;
+  font-size: 18px;
+  box-shadow: black 0px -10px 20px;
+}
+footer > p {
+  margin: 15px 0;
 }

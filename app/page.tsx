@@ -44,19 +44,19 @@ export default function Home() {
           </div>
           {/* <div className={`${styles.section} ${styles.contacts}`}></div> */}
           <footer>
-            <h2>
+            <p>
               This website is written with{" "}
               <a className="link" href="https://nextjs.org/">
                 Next.JS
               </a>{" "}
               and is completely open-source.
-            </h2>
-            <h2>
+            </p>
+            <p>
               Feel free to fork and use it:{" "}
               <a className="link" href="https://github.com/KiwiPetal/portfolio">
                 Repository
               </a>
-            </h2>
+            </p>
           </footer>
         </div>
       </div>

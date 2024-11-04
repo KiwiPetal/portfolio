@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Victor_Mono } from 'next/font/google';
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Kaylee's portfolio",
@@ -13,6 +15,18 @@ export const metadata: Metadata = {
   //   }]
   // }
 }
+
+export const victor_mono = Victor_Mono({
+  subsets: ['latin'],
+  style: ["normal", "italic"],
+  display: "swap"
+});
+
+export const major_mono = localFont({
+  src: "../public/MajorMono.ttf",
+  variable: "--font-title",
+  display: "swap"
+});
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="wrapper">
+      <body className={`wrapper ${major_mono.variable} ${victor_mono.className}`}>
         <svg>
           <filter id="grainy">
             <feTurbulence type="turbulence" baseFrequency="0.65" />
