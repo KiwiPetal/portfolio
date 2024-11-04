@@ -23,8 +23,8 @@
 
 .query code::after {
   content: "";
-  background: var(--main-color);
   position: absolute;
+  background: var(--foreground);
   top: 0;
   right: -5px;
   width: 2px;
@@ -34,11 +34,11 @@
 
 @keyframes blink {
   50% {
-    background: transparent;
+    opacity: 0;
   }
 
   0%,
   100% {
-    background: var(--main-color);
+    opacity: 1;
   }
 }
