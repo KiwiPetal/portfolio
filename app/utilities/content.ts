@@ -21,14 +21,17 @@ export const techStack = {
     Solidity: "/logos/solidity.png",
     Python: "/logos/python.png",
     PHP: "/logos/php.png",
+    HTML: "/logos/html.png",
+    CSS: "/logos/css.png",
     Dart: "/logos/dart.png",
     Lua: "/logos/lua.png",
-    SQL: "/logos/sql.png"
+    SQL: "/logos/sql.png",
   },
   "Frameworks I use": {
     NextJS: "/logos/next.png",
     React: "/logos/react.png",
     Flutter: "/logos/flutter.png",
+    Svelte: "/logos/svelte.png",
     Tailwindcss: "/logos/tailwind.png",
     FramerMotion: "/logos/framer.png",
     Anchor: "/logos/anchor.png",
