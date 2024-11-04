@@ -22,6 +22,7 @@
   transition: box-shadow 0.8s ease-in-out, z-index 0.5s 0s;
 }
 
+
 .card.open {
   position: fixed;
   top: 50%;
@@ -32,6 +33,9 @@
   transition: box-shadow 0.7s 0.1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 1) 10px 10px 15px;
   z-index: 10;
+  .mainImg {
+    opacity: 1;
+  }
 }
 
 .title {
@@ -48,9 +52,13 @@
 }
 
 .mainImg {
+  opacity: 0.5;
   transition: ease-in-out 0.3s;
   cursor: pointer;
   border-radius: 10px;
+}
+.mainImg:hover {
+  opacity: 1;
 }
 
 .name {

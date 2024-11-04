@@ -69,7 +69,7 @@ export function Card(props: props) {
         className={
           `${styles.card} ${open ? styles.open : ""}`
         }>
-        <motion.img className={styles.mainImg} layoutId={"img_" + props.id} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
+        <motion.img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
         <motion.div variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
           {
             length > 1 && (
