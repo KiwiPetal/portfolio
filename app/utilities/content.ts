@@ -9,16 +9,37 @@ export const titles = [
 
 export const aboutMeHeader = `cat ./AboutMe.md`;
 
-export const aboutMe = `# About Me
-I specialize in Frontend Development, but my expertise spans over lots of different technologies. 
+export const aboutMe = 
+`
+I specialize in Frontend Development, but my expertise spans over lots of different technologies.
 I have examples of a few previous projects I've been a part of below.
+`;
 
-# My Expertise
-- Frontend: React.JS, Next.JS, Flutter.
-- Backend: Express.JS, Sequelize, Python.
-- Blockchain: Solidity, Rust.
-- Databases: MySQL, ClickHouse.
-- Creativity: 3D Art, Sketching, Music.`;
+export const techStack = {
+  "Languages I know": {
+    Typescript: "/logos/ts.png",
+    Javascript: "/logos/js.png",
+    Rust: "/logos/rust.png",
+    Solidity: "/logos/solidity.png",
+    Python: "/logos/python.png",
+    PHP: "/logos/php.png",
+    Dart: "/logos/dart.png",
+    Lua: "/logos/lua.png",
+    SQL: "/logos/sql.png"
+  },
+  "Frameworks I use": {
+    NextJS: "/logos/next.png",
+    React: "/logos/react.png",
+    Flutter: "/logos/flutter.png",
+    Tailwindcss: "/logos/tailwind.png",
+    FramerMotion: "/logos/framer.png",
+    Anchor: "/logos/anchor.png",
+    NodeJS: "/logos/node.png",
+    MariaDB: "/logos/mariadb.png",
+    ClickHouse: "/logos/clickhouse.png",
+    ExpressJS: "/logos/express.png",
+  }
+} as const;
 
 export const links: Record<string, ILink> = {
   email: {
