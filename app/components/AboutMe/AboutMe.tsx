@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion, stagger, useInView, useTransform } from "framer-motion";
+import { AnimatePresence, motion, stagger, useInView, useTransform } from "framer-motion";
 import styles from "./AboutMe.module.css";
 import Code from "../Code/Code";
+import { aboutMe, techStack } from "@/app/utilities/content";
+import Image from "next/image";
 
 interface vars {
   enabled: boolean;
@@ -14,99 +16,74 @@ interface vars {
 //Adjust margin for isInView
 const AboutMe = ({ enabled, header, description }: vars) => {
   // const [open, setOpen] = useState(false);
-  const ref = useRef(null);
   const titleRef = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -50% 0px", once: true });
-  const isInViewTop = useInView(titleRef, { margin: "0px 0px -30% 0px", once: true });
-  const variants = {
-    hidden: {
-      width: "50px",
-      height: "50px",
-      borderRadius: "50%",
-      opacity: 0.2
-    },
-    shown: {
-      height: "fit-content",
-      borderRadius: "10px",
-      width: "fit-content",
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.65,0.05,0.36,1],
-        height: { delay: 0.8, duration: 1.5, ease: [0.17,0.84,0.5,1] },
+  const possibleGroups = Object.keys(techStack);
+  const [currentGroup, setCurrentGroup] = useState(possibleGroups[0]);
+  const staggerDelay = 0.05;
+  const containerStaggerDelay = 0.4;
+  const isInView = useInView(titleRef, { margin: "0px 0px -50% 0px", once: true });
+  const variants = (i: number) => {
+    return {
+      hidden: {
+        y: 25,
+        opacity: 0
       },
-    },
-  };
-  const staggerDelay = 0.3;
-  const lines = description.split("\n");
-  const lineVariants = lines.map((_, index) => ({
-    hidden: {
-      opacity: 0,
-      // width: "600px",
-    },
-    shown: {
-      opacity: 1,
-      transition: {
-        delay: index * staggerDelay + 1,
+      shown: {
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 1,
+          delay: containerStaggerDelay * i,
+        },
       },
-    },
-  }));
-
-  const characters = Array.from(header);
-
-  const containerVariants = {
-    hidden: { 
-    },
-    shown: {
-      transition: {
-        delay: 3,
-        staggerChildren: 0.04, 
-      }
     }
-  }
-  const childVariants = {
-    hidden: {
-      opacity: 1,
-      display: "none",
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-        duration: 0,
-      },
-    },
-    shown: {
-      opacity: 1,
-      display: "inline",
-      transition: {
-        damping: 12,
-        stiffness: 100,
-        duration: 0,
-      },
-    },
   };
+
+
   return (
     <div className={styles.wrapper}>
-        <Code text={header} enabled titleRef={titleRef} style="m" isInView={isInViewTop} terminal />
-      <motion.div
-        ref={ref}
-        variants={variants}
-        initial="hidden"
-        animate={enabled ? isInView ? "shown" : "hidden" : "hidden"}
-        className={styles.output}
-      >
-        {lines.map((line, index) => (
-          <motion.p
-            className={isInView ? styles.shown : styles.hidden}
-            key={index}
-            variants={lineVariants[index]}
-            initial="hidden"
-            animate={isInView ? "shown" : "hidden"}
-          >
-            {line}
-          </motion.p>
-        ))}
-      </motion.div>
+      <Code text="About Me" style="l" titleRef={titleRef} enabled isInView={isInView} />
+      <div className={styles.descriptionWrapper}>
+        <motion.p variants={variants(1)} animate={isInView ? "shown" : "hidden"} >
+          {aboutMe}
+        </motion.p>
+        <motion.div className={styles.wrapper} variants={variants(2)} animate={isInView ? "shown" : "hidden"}>
+          <div className={styles.selector}>
+            {possibleGroups.map(group => (
+              <div key={"groups:" + group} onClick={() => setCurrentGroup(group)}>
+                <p className={group === currentGroup ? styles.active : ""}>
+                  {group}
+                </p>
+                {
+                  group === currentGroup && (
+                    <motion.div layoutId="underline" className={styles.selected} />
+                  )
+                }
+              </div>
+            ))}
+          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentGroup}
+              className={styles.cardWrapper}>
+              { /* @ts-ignore */}
+              {Object.keys(techStack[currentGroup]).map((tech: string, i: number) => (
+                <motion.div
+                  key={"tech:" + tech}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ delay: i * staggerDelay }}
+                  className={styles.card}>
+                  { /* @ts-ignore */}
+                  <Image width={28} height={28} alt={`${tech} logo`} src={techStack[currentGroup][tech]} />
+                  <p>{tech}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+      </div>
     </div>
   );
 };
