@@ -35,7 +35,7 @@ const infoVariants = {
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
-      height: { delay: 0.2, duration: 0.5, ease: [0.17, 0.84, 0.5, 1] },
+      height: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
     },
   },
   close: {
@@ -44,7 +44,7 @@ const infoVariants = {
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
-      height: { duration: 0.2, ease: [0.17, 0.84, 0.5, 1] },
+      height: { duration: 0.5, ease: [0.17, 0.84, 0.5, 1] },
     },
   }
 }
