@@ -48,10 +48,12 @@ Layout of the page. Used only for Metadata
 Global css rules. Colours/Fonts
 
 ## TODOs
-- [x] intro card
-- [x] about me
-- [x] contacts
+- [x] Intro card
+- [x] About me
+- [x] Contacts
 - [x] Additional bars for finished products
 - [x] Rework bars for finished products
-- [ ] Reworked animations and accessibility
-- [ ] API integration
+- [x] Reworked animations and accessibility
+- [ ] Better Documentation for edits
+- [ ] Revamp Gallery with additional flair
+- [ ] (Questionable) API integration
