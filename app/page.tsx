@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import TitleChanger from "./components/TitleChanger/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
-import { aboutMe, content, links, titles } from "@/app/utilities/content";
+import { content, links, titles } from "@/app/utilities/content";
 import ParallaxItem from "./components/Parallax/Parallax";
 import Contacts from "./components/Contacts/Contacts";
 import Gallery from "./components/Gallery/Gallery";

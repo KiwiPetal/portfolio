@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Victor_Mono } from 'next/font/google';
 import localFont from "next/font/local";
 
@@ -35,7 +34,6 @@ export default function RootLayout({
           </filter>
         </svg>
         {children}
-        <SpeedInsights />
       </body>
     </html>
   )
