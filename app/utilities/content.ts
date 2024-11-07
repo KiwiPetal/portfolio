@@ -73,7 +73,7 @@ export const content: Record<ContentTypes, IContent[]> = {
   project: [
     {
       name: "Prime Delivery",
-      tags: ["ReactJS", "Tailwindcss", "python-telegram-bot", "MariaDB"],
+      tags: ["ReactJS", "Tailwindcss", "NodeJS", "python-telegram-bot", "MariaDB"],
       description: "A delivery fleet company working with Foodora. I made a landing/recruitment page for them (hasn't been hosted yet) and a shift manager as a Telegram Bot, which is connected to an admin webpanel.",
       pics: ["/pics/PrimeDelivery.png", "/pics/PrimeDelivery-dashboard.png"]
     },
