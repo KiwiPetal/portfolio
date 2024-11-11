@@ -10,7 +10,7 @@ interface vars {
 const Contacts = ({ links }: vars) => {
   const titleRef = useRef(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -33% 0px", once: true });
+  const isInView = useInView(ref, { margin: "0px 0px -10% 0px", once: true });
 
   const staggerDelay = 0.15;
   const contactVariants = Object.keys(links).map((_, i) => (
