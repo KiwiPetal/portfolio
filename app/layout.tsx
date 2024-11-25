@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   themeColor: "#0b0a0a"
 }
 
-export const victor_mono = Victor_Mono({
+const victor_mono = Victor_Mono({
   subsets: ['latin'],
   style: ["normal", "italic"],
   display: "swap"
 });
 
-export const major_mono = localFont({
+const major_mono = localFont({
   src: "../public/MajorMono.ttf",
   variable: "--font-title",
   display: "swap"

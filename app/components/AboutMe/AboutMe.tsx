@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, stagger, useInView, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import styles from "./AboutMe.module.css";
 import Code from "../Code/Code";
 import { aboutMe, techStack } from "@/app/utilities/content";

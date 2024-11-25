@@ -1,8 +1,8 @@
 'use client'
 import { IContent } from "@/app/utilities/content"
 import styles from "./Gallery.module.css"
-import React, { useRef, useState } from "react"
-import { AnimatePresence, motion, useInView } from "framer-motion"
+import React, { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import { Card } from "./Card/Card"
 import Code from "../Code/Code"
 
