@@ -48,6 +48,10 @@
 }
 
 .description {
+  position: absolute;
+  bottom: 0;
+  z-index: 11;
+  background-color: var(--backgroundAccent);
   overflow: hidden;
   padding: 0 20px;
 }
