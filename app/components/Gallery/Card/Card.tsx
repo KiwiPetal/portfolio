@@ -29,21 +29,25 @@ const pipVariants = {
 }
 const infoVariants = {
   open: {
+    scale: 1,
     height: "auto",
     paddingBottom: "15px",
     duration: 0.3,
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
+      scale: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
     },
   },
   close: {
+    scale: 0,
     height: "0px",
     paddingBottom: "0px",
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
       height: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
+      scale: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
     },
   }
 }
