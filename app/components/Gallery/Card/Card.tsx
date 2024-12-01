@@ -14,7 +14,7 @@ interface props {
 
 // Framer motion {{{
 const openSpring = { type: "spring", stiffness: 200, damping: 30 };
-const closeSpring = { type: "spring", stiffness: 200, damping: 25 };
+const closeSpring = { type: "spring", stiffness: 200, damping: 30 };
 const pipVariants = {
   hidden: {
     opacity: 0,
@@ -29,25 +29,23 @@ const pipVariants = {
 }
 const infoVariants = {
   open: {
-    scale: 1,
-    height: "auto",
+    opacity: 1,
+    height: "fit-content",
     paddingBottom: "15px",
     duration: 0.3,
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
-      scale: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
     },
   },
   close: {
-    scale: 0,
+    opacity: 0,
     height: "0px",
     paddingBottom: "0px",
     transition: {
-      duration: 0.8,
+      duration: 0.2,
       ease: [0.65, 0.05, 0.36, 1],
-      height: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
-      scale: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
+      height: { duration: 0.5, ease: [0.17, 0.84, 0.5, 1] },
     },
   }
 }
@@ -74,7 +72,7 @@ export function Card(props: props) {
             `${styles.card} ${open ? styles.open : ""}`
           }>
           <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
-          <motion.div layoutId={"description-layout-"+props.id} variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
+          <motion.div layoutId={"description-layout-"+props.id} variants={infoVariants} initial={"close"} animate={open ? "open" : "close"} className={styles.description}>
             {
               length > 1 && (
                 <motion.div
