@@ -30,7 +30,6 @@ const pipVariants = {
 const infoVariants = {
   open: {
     opacity: 1,
-    height: "max-content",
     paddingBottom: "15px",
     duration: 0.8,
     transition: {
@@ -40,12 +39,10 @@ const infoVariants = {
   },
   close: {
     opacity: 0,
-    height: "0px",
     paddingBottom: "0px",
     transition: {
-      duration: 0.8,
-      ease: [0.65, 0.05, 0.36, 1],
-      height: { duration: 0.5, ease: [0.17, 0.84, 0.5, 1] },
+      duration: 0.5,
+      ease: [0.17, 0.84, 0.5, 1],
     },
   }
 }
