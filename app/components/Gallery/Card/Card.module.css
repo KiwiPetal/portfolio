@@ -1,4 +1,5 @@
 .card_wrapper {
+  position: relative;
   width: 100%;
   min-height: 260px;
 }
@@ -25,7 +26,7 @@
 
 .card.open {
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   width: min(800px, 95%);
   height: auto;
@@ -47,6 +48,13 @@
 }
 
 .description {
+  position: absolute;
+  top: calc(100% + 10px);
+  height: auto;
+  border-radius: 10px;
+  z-index: 11;
+  background-color: var(--backgroundAccent);
+  box-shadow: rgba(0, 0, 0, 1) 10px 10px 15px;
   overflow: hidden;
   padding: 0 20px;
 }
