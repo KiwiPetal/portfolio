@@ -52,7 +52,6 @@
   /* background-color: var(--backgroundAccent); */
   overflow: hidden;
   padding: 0 20px;
-  transform-origin: top;
 }
 
 .mainImg {
