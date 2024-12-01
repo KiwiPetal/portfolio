@@ -46,8 +46,12 @@
   margin-top: 10px;
   font-style: italic;
 }
+.open .description {
+  pointer-events: auto;
+}
 
 .description {
+  pointer-events: none;
   position: absolute;
   top: calc(100% + 10px);
   height: auto;
