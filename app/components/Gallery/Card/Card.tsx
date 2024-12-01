@@ -58,7 +58,7 @@ export function Card(props: props) {
   return (
     <>
       <Overlay open={open} setClose={() => setOpen(false)} />
-      <div className={styles.card_wrapper}>
+      <div className={`${styles.card_wrapper} ${open ? styles.open_wrapper : ""}`}>
         <motion.div
           layoutId={"card" + props.id}
           key={"card" + props.id}
