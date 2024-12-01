@@ -14,7 +14,7 @@ interface props {
 
 // Framer motion {{{
 const openSpring = { type: "spring", stiffness: 200, damping: 30 };
-const closeSpring = { type: "spring", stiffness: 300, damping: 35 };
+const closeSpring = { type: "spring", stiffness: 200, damping: 25 };
 const pipVariants = {
   hidden: {
     opacity: 0,
@@ -56,63 +56,65 @@ export function Card(props: props) {
 
   const length = props.pics.length;
   return (
-    <div className={styles.card_wrapper}>
+    <>
       <Overlay open={open} setClose={() => setOpen(false)} />
-      <motion.div
-        layoutId={"card" + props.id}
-        key={"card" + props.id}
-        transition={{
-          duration: 0.5,
-          layout: open ? openSpring : closeSpring
-        }}
+      <div className={styles.card_wrapper}>
+        <motion.div
+          layoutId={"card" + props.id}
+          key={"card" + props.id}
+          transition={{
+            duration: 0.5,
+            layout: open ? openSpring : closeSpring
+          }}
 
-        className={
-          `${styles.card} ${open ? styles.open : ""}`
-        }>
-        <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
-        <motion.div variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
-          {
-            length > 1 && (
-              <motion.div
-                variants={pipVariants}
-                animate={open ? "visible" : "hidden"}
-                className={styles.pipsWrapper}>
-                <div className={styles.pips}>
-                  {props.pics.map((_, i) => {
-                    return (
-                      <div
-                        key={"pip" + i}
-                        onClick={() => setCurrentImage(i)}
-                        className={`${styles.pip}`} />
-                    )
-                  })}
-                  <div
-                    className={`${styles.pip} ${styles.activePip}`}
-                    style={{ '--length': length, '--current': currentImage } as React.CSSProperties}
-                  />
+          className={
+            `${styles.card} ${open ? styles.open : ""}`
+          }>
+          <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
+          <motion.div variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
+            {
+              length > 1 && (
+                <motion.div
+                  variants={pipVariants}
+                  animate={open ? "visible" : "hidden"}
+                  className={styles.pipsWrapper}>
+                  <div className={styles.pips}>
+                    {props.pics.map((_, i) => {
+                      return (
+                        <div
+                          key={"pip" + i}
+                          onClick={() => setCurrentImage(i)}
+                          className={`${styles.pip}`} />
+                      )
+                    })}
+                    <div
+                      className={`${styles.pip} ${styles.activePip}`}
+                      style={{ '--length': length, '--current': currentImage } as React.CSSProperties}
+                    />
+                  </div>
+                </motion.div>
+              )
+            }
+            <p className={styles.title}>
+              {props.title}
+            </p>
+            {
+              props.tags && (
+                <div className={`${styles.tags}`}>
+                  {props.tags.map((tag, tag_i) => (
+                    <p key={"tag" + props.id + tag_i} className={`${styles.tag}`}>
+                      #{tag}
+                    </p>
+                  ))}
                 </div>
-              </motion.div>
-            )
-          }
-          <p className={styles.title}>
-            {props.title}
-          </p>
-          {
-            props.tags && (
-              <div className={`${styles.tags}`}>
-                {props.tags.map((tag, tag_i) => (
-                  <p key={"tag" + props.id + tag_i} className={`${styles.tag}`}>
-                    #{tag}
-                  </p>
-                ))}
-              </div>
-            )
-          }
-          {props.description}
-        </motion.div>
+              )
+            }
+            {props.description}
+          </motion.div>
 
-      </motion.div>
-    </div>
+        </motion.div>
+      </div>
+    </>
   );
 }
 
