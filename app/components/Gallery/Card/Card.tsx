@@ -43,6 +43,7 @@ const infoVariants = {
     transition: {
       duration: 0.8,
       ease: [0.65, 0.05, 0.36, 1],
+      height: { duration: 0.8, ease: [0.17, 0.84, 0.5, 1] },
     },
   }
 }
@@ -69,7 +70,7 @@ export function Card(props: props) {
             `${styles.card} ${open ? styles.open : ""}`
           }>
           <img className={styles.mainImg} onClick={() => setOpen(!open)} alt={props.title ? props.title : ""} src={props.pics[currentImage]} />
-          <motion.div variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
+          <motion.div layoutId={"description-layout-"+props.id} variants={infoVariants} animate={open ? "open" : "close"} className={styles.description}>
             {
               length > 1 && (
                 <motion.div
