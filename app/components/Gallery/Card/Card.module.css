@@ -20,7 +20,7 @@
   z-index: 1;
   display: flex;
   border-radius: 10px;
-  transition: box-shadow 0.8s ease-in-out, z-index 0.5s 0s;
+  transition: box-shadow 0.8s ease-in-out, z-index 0.8s 0s;
 }
 
 
