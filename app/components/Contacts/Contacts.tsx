@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ILink } from "@/app/utilities/content";
 import Code from "../Code/Code";
+import Link from "next/link";
 
 interface vars {
   links: Record<string, ILink>
@@ -38,7 +39,9 @@ const Contacts = ({ links }: vars) => {
         {Object.keys(links).map((link, i) => {
           let _link = links[link];
           return (
-            <motion.a variants={contactVariants[i]} initial="hidden" animate={isInView ? "shown" : "hidden"} href={_link.link} key={_link.name + "_link"} className="box">{_link.name}</motion.a>
+            <Link href={_link.link} key={_link.name + "_link"} className={styles.link}>
+            <motion.div variants={contactVariants[i]} initial="hidden" animate={isInView ? "shown" : "hidden"} className="box">{_link.name}</motion.div>
+            </Link>
           )
         })}
       </div>

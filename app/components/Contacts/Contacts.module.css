@@ -7,6 +7,10 @@
   width: min(100%, 600px);
 }
 
+.link {
+  flex-grow: 1;
+}
+
 .comment {
   font-weight: var(--font-weight);
 }
